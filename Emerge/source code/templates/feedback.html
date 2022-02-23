@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Feedback</title>
+
+<link href="../static/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/navigation.css">
+
+
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+.background{
+width: 100%;
+height: 200vh;
+}
+.feedback-front {
+  width: 100%;
+  height: 70vh;
+  background-color: #F5F5F5;
+  color: #FFA07A;
+  position: relative;
+  margin-top: 2%;
+  z-index: 0;
+}
+.feedback-front-context {
+  width:40%;
+  top: 11%;
+  left: 12%;
+  position: relative;
+  float: left;
+  font-size: 33px;
+}
+.picture_first {
+  position: relative;
+  float: left;
+  top: 11%;
+  left: 20%;
+}
+.section_2{
+  width: 100%;
+  height: 30vh;
+  color: #FFA07A;
+  position: relative;
+}
+.current_feeback{
+  width: 40%;
+  position: relative;
+  float: left;
+  padding-top: 5%;
+  left: 28%;
+  height: 50%;
+  z-index: -1;
+  color: #FFA07A;
+}
+
+.section_3{
+  width: 100%;
+  height: 50vh;
+  background-color: #F5F5F5;
+  color: #FFA07A;
+  position:relative;
+}
+.feedback_comment_title{
+  float: left;
+  margin-top:3%;
+  width:100%;
+  margin-left: 5%;
+}
+.feedback_comment_title h3{
+  font-size: 35px;
+  text-decoration: bold;
+
+}
+.feedback_comment_input{
+  float: left;
+  width: 100%;
+  margin-left: 5%;
+  margin-top:1%;
+  height:30%;
+}
+.comment_input {
+    background: #F5F5F5;
+    border: 1px solid #E9967A;
+    height: 100%;
+    width:50%;
+}
+#comment_text{
+  padding: 4%;
+}
+
+/* .submit_btn{
+  cursor: pointer;
+  font-size:3em;
+  margin-left:53%;
+  margin-top:-3%;
+} */
+
+.comment_input input {
+    height: 100%;
+    width: 92%;
+    color: black;
+}
+
+.rate_the_coach{
+  float: left;
+  margin-left: 20%;
+  margin-top: -55%;
+
+}
+
+.start_button{
+  position: absolute;
+}
+.start_button button{
+  font-size: 30px;
+  font-weight: 300;
+  color:#FFA07A;
+  background-color: #FFF0F5;
+  border-radius: 8px;
+  border: 2px solid #98FB98;
+  cursor: pointer;
+}
+.start_button button:hover{
+  background-color: #DCDCDC;
+}
+.pop_out{
+  display: none;
+  position: absolute;
+  background-color: #FFFAF0;
+  border-radius: 8px;
+  padding: 9%;
+  top: 20%;
+  left:28%;
+  border: 2px solid #C0C0C0;
+  width:450px;
+  height:200px;
+  z-index: 1;
+}
+.first_pop_out{
+  display: flex;
+  align-items: center;
+  padding:2%;
+  font-size: 26px;
+  font-weight: 500;
+}
+.content_first_pop_out{
+  padding:4%;
+  border-bottom: 1px solid lightgray;
+}
+.info{
+  margin: 2%;
+
+}
+.buttons{
+  position: relative;
+  float: right;
+  padding:2%;
+}
+.buttons button{
+  font-size: 20px;
+  font-weight: 300;
+  color:#FFA07A;
+  background-color: #F8F8FF;
+  border-radius: 8px;
+  border: 1px solid #98FB98;
+  cursor: pointer;
+  margin-top: 1%;
+}
+.buttons button:hover{
+  background-color: #DCDCDC;
+}
+.survey_qn{
+  display: none;
+  position: absolute;
+  background-color: #FFFAF0;
+  border-radius: 8px;
+  padding: 9%;
+  top: 20%;
+  left:28%;
+  border: 2px solid #C0C0C0;
+  width:450px;
+  height:200px;
+  overflow: auto;
+  overflow-x: auto;
+  z-index: 1;
+
+}
+.each_question{
+  float: left;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  margin-top: -3%;
+  margin-bottom: 3%;
+
+
+}
+.line{
+  margin-top:230%;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+.each_question p{
+  float: left;
+  width: 100%;
+  overflow: auto;
+  height:20%;
+  font-size: 17px;
+}
+.each_question input{
+  float: right;
+  margin-left: 20%;
+  width:15vh;
+}
+</style>
+</head>
+
+<body style="width: 1720px;">
+
+<div class="background" id = "background">
+<script src="../static/javascript/navigationBar.js"></script>
+
+<div class="feedback-front">
+  <div class="feedback-front-context">
+    <h1>Submit your feedback now!</h1>
+    <p style="font-size: 25px; text-align:left;">
+    Please fill in your initial impression of your coach in "YourCoach" before completing this page <i class="fa fa-comment"></i></p>
+  </div>
+
+  <div class="picture_first">
+    <img src="../static/image/feedback.jpeg" alt="feedback Image" width="500px" height="340px">
+  </div>
+
+</div>
+
+
+<div class="section_2">
+
+<div class="current_feeback">
+<h2>Your current impression: {{impression}}</h2>
+</div>
+
+</div>
+
+<div class="section_3">
+
+  <div class="feedback_comment_title">
+  <h3>Write some comments for your coach:</h3>
+
+  </div>
+
+  <form method='POST' >
+    <input type="hidden" name="form-name" value = "content"></input>
+
+  <div class="feedback_comment_input">
+  <div class="comment_input">
+    <input type="text" id="comment_text"  name ="content" placeholder="Comment for the coach" >
+  </div>
+  <!-- <div class="submit_btn" id="comment_btn">
+  <i class="fa fa-fire"></i>
+  </div> -->
+  </div>
+  </form>
+
+</div>
+</div>
+
+<div class="rate_the_coach" id="rate">
+  <div class="start_button" id="start" onclick="start()">
+    <button>Start Survey</button>
+  </div>
+  <div class="pop_out" id="pop_out">
+    <div class="first_pop_out">
+      <span>Let's start the survey for your coach</span>
+    </div>
+    <div class="content_first_pop_out">
+      <div class="info">1. A total of 10 questions </div>
+      <div class="info">2. Input/Slide your choice beside each question (only from 1 to 5)</div>
+      <div class="info">4. 1 is the least satisfaction </div>
+      <div class="info">5. 5 is the most satisfaction </div>
+    </div>
+    <div class="buttons" onclick="nextPage()">
+      <button class="next" id="next">Next</button>
+    </div>
+  </div>
+
+<form method='POST'>
+<input type="hidden" name="form-name" value = "survey"></input>
+
+<div class="survey_qn" id="survey_qn">
+  <div class="each_question">
+    <p> Question 1: <br> The coach was effective in helping me reach my goals</p>
+    <input type="range" maxlength="1" name="q1" placeholder="e.g. 3"  min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 2: <br> I valued the time we spent, both coaching and chatting </p>
+    <input type="range" name="q2" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 3: <br> The coach cares about my progress </p>
+    <input type="range" name="q3" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 4: <br> We discussed any performance shortfalls or failures to complete action steps </p>
+    <input type="range" name="q4" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 5: <br> The coach is professional </p>
+    <input type="range" name="q5" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 6: <br> I feel heard, understood and respected </p>
+    <input type="range" name="q6" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 7: <br> The coach used positive reinforcement  </p>
+    <input type="range" name="q7" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 8: <br> The coach displayed good knowledge of the goals I want to achieve</p>
+    <input type="range" name="q8" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 9: <br> I have been able to identify some unexpected areas of learning </p>
+    <input type="range" name="q9" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+  </div>
+  <div class="each_question">
+    <p> Question 10: <br> I value the coaching sessions and prioritise my attendance </p>
+    <input type="range" name="q10" placeholder="e.g. 3" maxlength="1" min="1" max="5" required>
+
+  </div>
+<div class="line"></div>
+
+
+  <div class="buttons" onclick="done()">
+
+
+    <button type="submit" class="done" id="done">Done</button>
+  </div>
+
+</div>
+</form>
+
+
+<script>
+
+  function start(){
+    document.getElementById("pop_out").style.display="block";
+    document.getElementById("background").style.opacity="0.2";
+
+  }
+  function nextPage(){
+    document.getElementById("survey_qn").style.display="block";
+    document.getElementById("pop_out").style.display="none";
+    document.getElementById("background").style.opacity="0.2";
+
+  }
+  function done(){
+    document.getElementById("survey_qn").style.display="none";
+    document.getElementById("background").style.opacity="1";
+  }
+
+
+
+</script>
+</div>
+
+
+
+
+
+
+  </body>
+</html>

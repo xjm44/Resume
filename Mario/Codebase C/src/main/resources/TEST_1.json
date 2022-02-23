@@ -1,0 +1,66 @@
+{
+
+  "hero": {
+    "x": 20.0,
+    "xVelocity": 5.0,
+    "size" : "normal"
+  },
+
+  "floorHeight": 450.0,
+  "levelWidth": 5500.0,
+  "levelHeight": 600.0,
+
+  "immovableEntities": [
+
+    {
+      "type": "block",
+      "x": 150.0,
+      "y": 330.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 450.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "platform",
+      "x": 3100.0,
+      "y": 425.0
+    },
+
+    {
+      "type": "finish_flag",
+      "x": 5500.0,
+      "y": 450.0
+    }
+
+  ],
+
+  "movableEntities": [
+
+    {
+      "type": "cloud",
+      "x": 75.0,
+      "y": 150.0,
+      "xVelocity": 36.7
+    }
+
+  ],
+
+  "enemies": [
+
+    {
+      "type": "slimeR",
+      "x": 400.0
+    },
+
+    {
+      "type": "slimeY",
+      "x": 600.0
+    }
+
+  ]
+
+}

@@ -1,0 +1,192 @@
+<!doctype html>
+{% include 'layout.html' %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/admin.css">
+        <!-- boxicons icons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <script src = "{{ url_for('static', filename='/javascript/admin.js') }}"></script>
+        <style>
+        </style>
+
+    </head>
+        <body onload="changeSection()">
+            <script src="../static/javascript/sidebar_admin.js"></script>
+                <div class="Dashboard">
+                  <h2>Match Application</h2>
+                  <a href="/admin/match" id="matchButton">Match</a>
+                  <table>
+                    <tr id ="header">
+                      <th>Leader</th>
+                      <th>Coach</th>
+                      <th>Agreement</th>
+                    </tr>
+                    {% for application in applications %}
+                    <form method="post" action="/admin/application">
+                    <input type="hidden" name="form-name" value="application"></input>
+                    <input type="hidden" name="app-user-id" value={{application[0]}}></input>
+                    <input type="hidden" name="matched-coach-id" value={{application[3]}}></input>
+                    <tr id = "content">
+                      <td>{{application[1]}} {{application[2]}}</td>
+                      <td>{{application[4]}} {{application[5]}}</td>
+                      <td><button class="delete" value="True">Agree</button></td>
+                    </tr>
+                    </form>
+                    {% endfor %}
+                  </table>
+                </div>
+                <div class="Coach">
+                    <h2>Coach</h2>
+                    <table>
+                        <tr id="header">
+                            <th>Name</th>
+                            <th>Matched</th>
+                            <th>Action</th>
+                        </tr>
+                        {% for coach_id in coachInfo %}
+                        <tr id="content">
+                            <td>{{ coachInfo[coach_id][0][0] }} {{ coachInfo[coach_id][0][1] }}</td>
+                            <td>
+                              {% for leader_info in coachInfo[coach_id] %}
+                                {% if leader_info[2] != None %}
+                                  {{ leader_info[2] }} {{ leader_info[3] }}<br>
+                                {% endif %}
+                              {% endfor %}
+                            </td>
+                            <form id="deleteUser" method='POST'>
+                                <input type="hidden" name="form-name" value="delete_coach"></input>
+                                <td><button class="delete">Delete</button></td>
+                                <input type="hidden" name="choosed_user" value="{{ coach_id }}"></input>
+                            </form>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <a href="/admin/addNewCoach" id="add">Add</a>
+                </div>
+
+                <div class="Client">
+                    <h2>Leader</h2>
+                    <table>
+                        <tr id="header">
+                            <th>Name</th>
+                            <th>Matched</th>
+                            <th>Action</th>
+                        </tr>
+                        {% for row in clientInfo %}
+                        <tr id="content">
+                            <td>{{ row[1] }} {{ row[2] }}</td>
+                                <td>{{ row[3] }} {{ row[4] }}</td>
+                                <form id="deleteUser" method='POST'>
+                                    <input type="hidden" name="form-name" value="delete_leader"></input>
+                                    <td><button class="delete">Delete</button></td>
+                                    <input type="hidden" name="choosed_user" value="{{ row[0] }}"></input>
+                                </form>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <a href="/admin/addNewClient" id="add">Add</a>
+                </div>
+
+                <form id="addCoach" method='POST'>
+                <input type="hidden" name="form-name" value="addCoach"></input>
+                <div class="addNewCoach">
+                    <legend>Add new coach</legend>
+                    <input name="firstname" type="firstname" placeholder="Firstname" required>
+                    <input name="lastname" type="lastname" placeholder="Lastname" required>
+                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="age" type="age" placeholder="Age" required>
+                    <input name="username" type="username" placeholder="Username" required>
+                    <input name="password" type="password" placeholder="Password" required>
+                    <input name="zoomKey" type="zoomKey" placeholder="Zoom Key" required>
+                    <input name="zoomSecret" type="zoomSecret" placeholder="Zoom Secret" required>
+                    <input type="submit" value="Add">
+                </div>
+                </form>
+
+                <form id="addClient" method='POST'>
+                <input type="hidden" name="form-name" value="addLeader"></input>
+                <div class="addNewClient">
+                    <legend>Add new Leader</legend>
+                    <input name="firstname" type="firstname" placeholder="Firstname" required>
+                    <input name="lastname" type="lastname" placeholder="Lastname" required>
+                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="username" type="username" placeholder="Username" required>
+                    <input name="password" type="password" placeholder="Password" required>
+                    <input type="submit" value="Add">
+                </div>
+                </form>
+
+                <form id="match" method='POST'>
+                <input type="hidden" name="form-name" value="match"></input>
+                <div class="match">
+                    <legend>Match a new Coach</legend>
+                    <div class="dropdown_leader">
+                        <select name="leader_list" id="leader_list">
+                            <div class="leaders">
+                                <option value="Leaders">Leaders</option>
+                                {% for each in leaderName %}
+                                <option value="{{ each[0] }}">{{ each[1] }} {{ each[2] }}</option>
+                                {% endfor %}
+                            </div>
+                        </select>
+                    </div>
+
+                    <div class="dropdown_coach">
+                        <select name="coach_list" id="coach_list">
+                            <option value="Coaches">Coaches</option>
+                            {% for each in coachName %}
+                            <option value="{{ each[0] }}">{{ each[1] }} {{ each[2] }}</option>
+                            {% endfor %}
+                            <option value="NULL">None</option>
+                        </select>
+
+                    </div>
+                    <input type="submit" value="Match">
+                </div>
+                </form>
+                
+                <div class="feedback">
+                    <h2>Feedback</h2>
+                    <table>
+                        <tr id="header">
+                            <th>Leader</th>
+                            <th>Coach</th>
+                            <th>Comment</th>
+                            <th>impression</th>
+                            <th>Mark</th>
+                            <th>Action</th>
+                            <th></th>
+                        </tr>
+                        {% for row in feedback %}
+                        <tr id="content">
+                                <td>{{ row[1] }} {{ row[2] }}</td>
+                                <td>{{ row[3] }} {{ row[4] }}</td>
+                                <td>{{ row[5] }}</td>
+                                <td>{{ row[6] }}</td>
+                                <td>{{ row[7] }}</td>
+                                <form id="approveFeedback" method='POST'>
+                                    <input type="hidden" name="form-name" value="approveFeedback"></input>
+                                    <td><button class="approve">approve</button></td>
+                                    <input type="hidden" name="choosed_user" value="{{ row[0] }}"></input>
+                                </form>
+                                <form id="deleteFeedback" method='POST'>
+                                    <input type="hidden" name="form-name" value="deleteFeedback"></input>
+                                    <td><button class="delete">delete</button></td>
+                                    <input type="hidden" name="choosed_user" value="{{ row[0] }}"></input>
+                                </form>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+        </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Your Coach</title>
+    <link rel="stylesheet" href="../static/css/navigation.css">
+    <link rel="stylesheet" href="../static/css/style_yourcoach.css">
+    <script src="../static/javascript/yourcoachbutton.js">
+    </script>
+
+
+
+</head>
+
+<body style="min-width: 1680px;">
+
+<div class="gap" id = "background">
+
+  <!-- navi bar -->
+<script src="../static/javascript/navigationBar.js"></script>
+
+
+<a onclick="pressed_chat()">
+  <button class="chatbutton" id="cbtn">Message</button>
+
+</a>
+
+
+
+
+
+<!-- <a onclick="pressed_zoom()">
+  <button class="zoombutton">Zoom</button>
+</a> -->
+
+
+
+<!-- main page -->
+  <div class="your_coach_main" >
+
+
+    <div class="firstcontent">
+      <div class="coachname">
+        <p>Current coach: {{coachnames[0]}}&nbsp&nbsp{{coachnames[1]}}</p>
+      </div>
+      <div class="container">
+        <div class="calendar">
+          <div hidden class="not_default" value="{{date}}"></div>
+          <div hidden class="coach_time" value="{{coach_time}}"></div>
+          <div class="month">
+            <i class="left arrow" onclick="last()"></i>
+            <div class="date">
+              <p></p>
+            </div>
+            <i class="right arrow" onclick="next()"></i>
+          </div>
+          <div class="week">
+            <p>Mon</p>
+            <p>Tue</p>
+            <p>Wed</p>
+            <p>Thu</p>
+            <p>Fri</p>
+            <p>Sta</p>
+            <p>Sun</p>
+          </div>
+          <div class="days">
+          </div>
+        </div>
+        <div class = event>
+          <h2 style="color:black; margin-left:5%; margin-top:20px;"></h2>
+          <div style="width:80%; border-bottom: 1px solid; border-color:#009400;"></div>
+          <div class="cards">
+          </div>
+        </div>
+      </div>
+
+      <script src="../static/javascript/calendar.js"></script>
+
+      <div class="coachprofile">
+
+        <img src="../static/image/coach.jpeg" alt="Coach Image" width="350px" height="520px">
+      </div>
+
+      <div class="feedback" id="feedback">
+        <h1>Feedback for this coach?<br></h1>
+
+        <form method='POST' >
+            <input type="hidden" name="form-name" value = "impressiongood"></input>
+          <a onclick="pressed_feedback()">
+            <button type="submit" class="feedbackbutton" name="good">Good</button>
+          </a>
+        </form>
+
+        <form method='POST' >
+            <input type="hidden" name="form-name" value = "impressionbad"></input>
+
+          <a onclick="pressed_feedback1()">
+            <button type="submit" class="feedbackbutton1" name="bad">Bad</button>
+          </a>
+        </form>
+
+      </div>
+
+      <div class="moreinfo">
+        <h1>Evidence-based insights about the coach:</h1>
+        <br>
+        <h2>Let's find out more!<br>
+          <a href="/evidencebasedcoach"><button class="readmorebutton">Read More</button></a>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="secondcontent">
+      <div class="horiline1"></div>
+
+      <div class="coachinfo">
+
+        <div class="background">
+          <h1>Basic Information</h1>
+          <h2>Age:&nbsp&nbsp{{info[0]}} <br><br>
+          Phone:&nbsp&nbsp{{info[1]}}</h2>
+        </div>
+
+        <div class="coachingphi">
+            <h1>Goals</h1>
+            <h2>Goal 1:&nbsp&nbsp{{goals[0]}} <br><br>
+                Goal 2:&nbsp&nbsp{{goals[1]}} <br><br>
+                Goal 3:&nbsp&nbsp{{goals[2]}}  </h2>
+        </div>
+
+        <div class="approach">
+            <h1>Background</h1>
+            <h2>Industry:&nbsp&nbsp{{industry[0]}} <br><br>
+            Year of experience:&nbsp&nbsp{{yoe[0]}}  </h2>
+        </div>
+
+      </div>
+
+        <div class="horiline2"></div>
+
+
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+<div class="chat" id="chat" >
+
+  <div class="picture_chat_box">
+
+
+    <!-- learnt from https://csshint.com/html-css-chat-box-designs/ -->
+  <div class="chat2">
+  <section class="chatbox">
+    <section class="chat-background" id ="chat-background">
+        <!-- chat messages -->
+        {% for i in range(0,allmsg) %}
+        <!-- 0 == sender -->
+        {% if result[i][4] == 0 %}
+        <article class="message_sender" id="message_sender">
+          <div class="message_box">
+            <div class="label">
+                <p class="msg" id="msg_s">
+                  {{result[i][0]}}
+                </p>
+              <span class="timestamp">
+                <span class="sent_time"> {{result[i][3]}} </span>
+              </span>
+            </div>
+          </div>
+        </article>
+        {% else %}
+        <article class="message_receiver" id="message_receiver">
+           <div class="message_box">
+             <div class="label">
+                 <p class="msg" id="msg_r">
+                   {{result[i][0]}}
+                 </p>
+
+              <span class="timestamp">
+                 <span class="sent_time">{{result[i][3]}}</span>
+               </span>
+            </div>
+           </div>
+         </article>
+        {% endif %}
+        {% endfor %}
+
+    </section>
+     <!-- send chat -->
+    <form method='POST' >
+      <input type="hidden" name="form-name" value = "message"></input>
+      <div class="chat-input">
+        <div class="aa">
+      <input type="text" id="chat_msg"  name ="message" placeholder="Message to the coach" >
+      </div>
+      <div class="bb">
+          <input  type="submit" value='press enter' id="chat_btn" >
+    </div>
+
+    </div>
+    </form>
+
+<script src="../static/javascript/chat.js" ></script>
+  </section>
+  </div>
+  </div>
+  <div class="closebtn_chat">+</div>
+
+
+</div>
+
+
+<!-- <div class="zoom" id="zoom">
+
+  <div class="content">
+    <h1>Press it to zoom chat with the coach now!</h1>
+    <a href="" class="button">Click Me</a>
+  </div>
+
+  <div class="closebtn_zoom">+</div>
+
+</div> -->
+
+<div class="feedbk1" id="feedback1">
+  <h1>Thank You For Your Feedback!!</h1>
+</div>
+
+<div class="feedbk2" id="feedback1">
+  <h1>Thank You For Your Feedback!!</h1>
+</div>
+
+
+<div class="pick" id="pick">
+
+  <a href="#" onclick="pressed_pick()" ><button>&times</button></a>
+  <h1>Successfully Picked!</h1>
+</div>
+
+{% if hassent == 1 %}
+<script>
+document.getElementById("cbtn").click();
+var out = document.getElementById("chat-background");
+out.scrollTop = out.scrollHeight - out.clientHeight;
+document.getElementById("chat_msg").focus();
+</script>
+{% endif %}
+</body>
+</html>

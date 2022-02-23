@@ -1,0 +1,300 @@
+{
+  "_comment": "This is the sample JSON file. You must use this format for your JSON files as we will be using similar formats when marking your assignment. Anything starting with an underscore (like this _comment) should be ignored.",
+  "_stickmanSizeComment": "Your main character can be tiny, normal, large, or giant. What pixel dimensions these match can be up to you.",
+
+  "hero": {
+    "x": 20.0,
+    "xVelocity": 5.0,
+    "size" : "normal"
+  },
+
+  "target":15 ,
+
+  "immovableEntities": [
+
+    {
+      "type": "block",
+      "x": 150.0,
+      "y": 330.0
+    },
+
+    {
+      "type": "block",
+      "x": 210.0,
+      "y": 240.0
+    },
+
+
+    {
+      "type": "block",
+      "x": 3700.0,
+      "y": 300.0
+    },
+
+
+    {
+      "type": "block",
+      "x": 600.0,
+      "y": 370.0
+    },
+
+    {
+      "type": "block",
+      "x": 430.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 460.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 490.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1020.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1050.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1080.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1110.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1140.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 750.0,
+      "y": 200.0
+    },
+
+
+
+    {
+      "type": "platform",
+      "x": 475.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "block",
+      "x": 400.0,
+      "y": 325.0
+    },
+
+
+    {
+      "type": "ice_platform",
+      "x": 3200.0,
+      "y": 400.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 3050.0,
+      "y": 350.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 4200.0,
+      "y": 375.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 1350.0,
+      "y": 380.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 1500.0,
+      "y": 325.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 1650.0,
+      "y": 350.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 1800.0,
+      "y": 375.0
+    },
+
+        {
+      "type": "ice_platform",
+      "x": 1950.0,
+      "y": 375.0
+    },
+
+
+
+    {
+      "type": "finish_flag",
+      "x": 4500.0,
+      "y": 317.5
+    }
+
+  ],
+
+  "_stickmanPosComment": "Stickman should start at the x position indicated, with their y position being on your 'floor'. This must be a positive double.",
+
+  "movableEntities": [
+    {
+      "type": "cloud",
+      "x": 75.0,
+      "y": 150.0,
+      "xVelocity": 36.7
+    },
+
+    {
+      "type": "cloud",
+      "x": 450.0,
+      "y": 55.0,
+      "xVelocity": 34.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 700.0,
+      "y": 85.0,
+      "xVelocity": 15.6
+    },
+
+    {
+      "type": "cloud",
+      "x": 900.0,
+      "y": 30.0,
+      "xVelocity": 35.6
+    },
+
+    {
+      "type": "cloud",
+      "x": 400.0,
+      "y": 115.0,
+      "xVelocity": 25.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 700.0,
+      "y": 105.0,
+      "xVelocity": 16.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 1300.0,
+      "y": 125.0,
+      "xVelocity": 13.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 1700.0,
+      "y": 90.0,
+      "xVelocity": 40.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 3400.0,
+      "y": 150.0,
+      "xVelocity": 20.5
+    }
+  ],
+
+  "enemies": [
+    {
+      "type": "slimeY",
+      "x": 2450.0
+    },
+
+    {
+      "type": "slimeG",
+      "x": 500.0
+    },
+
+    {
+      "type": "slimeB",
+      "x": 650.0
+    },
+
+
+    {
+      "type": "slimeR",
+      "x": 1600.0
+    },
+
+    {
+      "type": "slimeY",
+      "x": 2350.0
+    },
+
+    {
+      "type": "slimeY",
+      "x": 2500.0
+    },
+
+
+    {
+      "type": "slimeP",
+      "x": 3000.0
+    },
+
+    {
+      "type": "slimeG",
+      "x": 3300.0
+    },
+
+    {
+      "type": "slimeB",
+      "x": 3500.0
+    },
+
+    {
+      "type": "slimeR",
+      "x": 3600.0
+    },
+
+
+    {
+      "type": "slimeR",
+      "x": 4000.0
+    }
+
+  ],
+
+  "_cloudVelocityComment": "Clouds should move the given number of pixels per second. This must be a positive double.",
+  "floorHeight": 450.0,
+  "levelWidth": 4500.0,
+  "levelHeight": 600.0
+}

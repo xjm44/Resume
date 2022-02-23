@@ -1,0 +1,55 @@
+<!doctype html>
+{% include 'layout.html' %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <title>coach application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/coachApplication.css">
+        <link rel="stylesheet" href="../static/css/navigation.css">
+
+    </head>
+        <body style="margin: 0px">
+            <script src="../static/javascript/HeadBar_no_login.js"></script>
+                <form class="register" action="https://formspree.io/f/xnqlwzrq" method='POST'>
+                    <legend>Join Us</legend>
+                    <input name="firstname" type="firstname" placeholder="Firstname" required>
+                    <input name="lastname" type="lastname" placeholder="Lastname" required>
+                    <input name="email" type="email" placeholder="Email" required>
+
+
+                    <input name="phone" type="phone" placeholder="Phone" required>
+                    <input name="age" type="age" placeholder="Age" required>
+                    <input name="years of experience" type="years of experience" placeholder="years of experience" required>
+
+                    <div class="gender">
+                        <p>Please choose your gender</p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="hidden" name="gender" value="perfer not to say">
+                        <label for="hidden">Perfer not to say</label>
+                    </div>
+
+                    <!-- <div class="identify">
+                        <p>Please choose your identify</p>
+                        <input type="radio" id="leader" name="identify" value="Leader">
+                        <label for="leader">Leader</label>
+                        <input type="radio" id="coach" name="identify" value="Coach">
+                        <label for="coach">Coach</label>
+
+                    </div> -->
+
+                    <input type="submit" value="Apply">
+                    <div class="inner">
+                        <a href="/coachApplication">Cancel</a>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </body>
+</html>

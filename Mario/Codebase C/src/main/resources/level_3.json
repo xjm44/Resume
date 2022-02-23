@@ -1,0 +1,334 @@
+{
+  "_comment": "This is the sample JSON file. You must use this format for your JSON files as we will be using similar formats when marking your assignment. Anything starting with an underscore (like this _comment) should be ignored.",
+  "_stickmanSizeComment": "Your main character can be tiny, normal, large, or giant. What pixel dimensions these match can be up to you.",
+
+  "hero": {
+    "x": 20.0,
+    "xVelocity": 5.0,
+    "size" : "normal"
+  },
+
+  "target":13 ,
+
+  "immovableEntities": [
+
+    {
+      "type": "block",
+      "x": 250.0,
+      "y": 400.0
+    },
+
+    {
+      "type": "block",
+      "x": 250.0,
+      "y": 380.0
+    },
+
+
+    {
+      "type": "block",
+      "x": 340.0,
+      "y": 280.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 2450.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 2600.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "block",
+      "x": 600.0,
+      "y": 260.0
+    },
+
+    {
+      "type": "block",
+      "x": 630.0,
+      "y": 260.0
+    },
+
+    {
+      "type": "block",
+      "x": 960.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 990.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1020.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1050.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 1080.0,
+      "y": 170.0
+    },
+
+    {
+      "type": "block",
+      "x": 2110.0,
+      "y": 350.0
+    },
+
+    {
+      "type": "block",
+      "x": 2140.0,
+      "y": 350.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 750.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 900.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 1050.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 5200.0,
+      "y": 300.0
+    },
+
+    {
+      "type": "platform",
+      "x": 1475.0,
+      "y": 200.0
+    },
+
+    {
+      "type": "block",
+      "x": 1400.0,
+      "y": 325.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 3750.0,
+      "y": 400.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 3200.0,
+      "y": 225.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 3050.0,
+      "y": 250.0
+    },
+
+
+    {
+      "type": "ice_platform",
+      "x": 2950.0,
+      "y": 325.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 2650.0,
+      "y": 350.0
+    },
+
+    {
+      "type": "ice_platform",
+      "x": 4400.0,
+      "y": 345.0
+    },
+
+        {
+      "type": "ice_platform",
+      "x": 3250.0,
+      "y": 340.0
+    },
+
+    {
+      "type": "platform",
+      "x": 3100.0,
+      "y": 325.0
+    },
+
+    {
+      "type": "finish_flag",
+      "x": 5500.0,
+      "y": 317.5
+    }
+
+  ],
+
+  "_stickmanPosComment": "Stickman should start at the x position indicated, with their y position being on your 'floor'. This must be a positive double.",
+
+  "movableEntities": [
+    {
+      "type": "cloud",
+      "x": 75.0,
+      "y": 150.0,
+      "xVelocity": 36.7
+    },
+
+    {
+      "type": "cloud",
+      "x": 450.0,
+      "y": 55.0,
+      "xVelocity": 34.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 700.0,
+      "y": 85.0,
+      "xVelocity": 15.6
+    },
+
+    {
+      "type": "cloud",
+      "x": 900.0,
+      "y": 30.0,
+      "xVelocity": 35.6
+    },
+
+    {
+      "type": "cloud",
+      "x": 1400.0,
+      "y": 115.0,
+      "xVelocity": 25.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 1700.0,
+      "y": 105.0,
+      "xVelocity": 16.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 2300.0,
+      "y": 125.0,
+      "xVelocity": 13.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 2700.0,
+      "y": 90.0,
+      "xVelocity": 40.5
+    },
+
+    {
+      "type": "cloud",
+      "x": 3400.0,
+      "y": 150.0,
+      "xVelocity": 20.5
+    }
+  ],
+
+  "enemies": [
+    {
+      "type": "slimeY",
+      "x": 450.0
+    },
+
+    {
+      "type": "slimeG",
+      "x": 500.0
+    },
+
+    {
+      "type": "slimeB",
+      "x": 650.0
+    },
+
+    {
+      "type": "slimeR",
+      "x": 900.0
+    },
+
+    {
+      "type": "slimeP",
+      "x": 1100.0
+    },
+
+    {
+      "type": "slimeR",
+      "x": 1300.0
+    },
+
+    {
+      "type": "slimeY",
+      "x": 3350.0
+    },
+
+    {
+      "type": "slimeY",
+      "x": 3500.0
+    },
+
+    {
+      "type": "slimeR",
+      "x": 3800.0
+    },
+
+    {
+      "type": "slimeP",
+      "x": 4000.0
+    },
+
+    {
+      "type": "slimeG",
+      "x": 4300.0
+    },
+
+    {
+      "type": "slimeR",
+      "x": 4600.0
+    },
+
+    {
+      "type": "slimeB",
+      "x": 4900.0
+    },
+
+
+
+  ],
+
+  "_cloudVelocityComment": "Clouds should move the given number of pixels per second. This must be a positive double.",
+  "floorHeight": 450.0,
+  "levelWidth": 5500.0,
+  "levelHeight": 600.0
+}

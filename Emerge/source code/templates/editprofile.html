@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>editProfile</title>
+        <style>
+
+            .main{
+                padding:0px 50px 0px 50px;
+            }
+
+            .card{
+                padding: 2rem 1rem 2rem 1rem ;
+                margin: auto;
+                overflow: hidden;
+                width: 75%;
+            }
+            .image-card{
+                background: linear-gradient(to right, green, aquamarine);
+                width: 100%;
+            }
+
+            .uimage{
+                padding: 0.3rem;
+                height: 100px;
+                width: 100px;
+                background-color: white;
+                border-radius: 50%;
+                position: relative;
+                float: left;
+                margin-left: 15%;
+            }
+
+            .column{
+                display: inline-block;
+                vertical-align: top;
+                width: 48%;
+            }
+
+            .column p{
+                margin-top:20px;
+                margin-left:10%;
+                margin-bottom:20px;
+            }
+
+            .column input{
+                margin-left:10%;
+                width: 80%;
+                height: 30px;
+            }
+
+            .savebutton{
+                background-color: #4CBF4E;
+                border:None;
+                color:white;
+                padding:0.7rem 1.7rem 0.7rem 1.7rem;
+                font-size:18px;
+                float:right;
+                right:10%;
+                position:relative;
+                bottom:25px;
+            }
+
+             .column select{
+                margin-left:10%;
+                width: 81.5%;
+                height: 37px;
+                padding: 1px 2px;
+                margin-bottom:5px;
+            }
+
+        </style>
+        <link rel="stylesheet" href="../static/css/navigation.css">
+    </head>
+    <body>
+        <script src="../static/javascript/navigationBar.js"></script>
+        <div class="card image-card">
+            <h3 style="color: black; float: left; position: relative; left:30px; margin-top:50px;"> {{ profile[0] }} </h3>
+        </div>
+        <div class="main">
+            <input type="hidden" class="profile" value="{{profile}}">
+            <form class="card" action="/editprofile" method="POST">
+                <h2 style="margin-bottom:0px;">Edit Profile</h2>
+                <p style="float:left; position:relative;">view and edit you information below</p>
+                <input type="submit" class="savebutton" value="Save">
+                <br><br><br>
+                <hr>
+                <br>
+                <h3 style="margin-left:5% "> Display Information </h3>
+                <p style="margin-top:20px; margin-left:5%; margin-bottom:20px;">User Name</p>
+                <input type="text" name="username" required value="{{ profile[0] }}" style="margin-left:5%; width: 38.4%; height: 30px;">
+                <br><br>
+                <hr>
+                <br>
+                <h3 style="margin-left:5%"> Personal Information </h3>
+                <div class="column">
+                    <p> First Name </p>
+                    <input type="text" name="firstname" value="{{ profile[1] }}">
+                    <p> Age </p>
+                    <input type="number" name="age" value="{{ profile[3] }}" required="required" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(value.length>2)value=value.slice(0,2);"></input>
+                    <p> Birthday </p>
+                    <input type="text" name="birthday" value="{{ profile[5] }}">
+                </div>
+                <div class="column">
+                    <p> Last Name </p>
+                    <input type="text" name="lastname" value="{{ profile[2] }}">
+                    <p> Gender </p>
+                    <select id="gender" name="gender">
+                        <option value="Male"> Male </option>
+                        <option value="Female"> Female </option>
+                        <option value="Transgender"> Transgender </option>
+                        <option value="Non-binary/non-conforming"> Non-binary/non-conforming </option>
+                        <option value="Prefer not to respond"> Prefer not to respond </option>
+                    </select>
+                </div>
+                <br><br>
+                <hr>
+                <br>
+                <h3 style="margin-left:5%"> Contact Information </h3>
+                <div class="column">
+                    <p> Email </p>
+                    <input type="text" name="email" required value="{{ profile[6] }}">
+                    <p> Mobile Phone </p>
+                    <input type="text" name="mobile" value="{{ profile[8] }}">
+                </div>
+                <div class="column">
+                    <p> Location </p>
+                    <input type="text"  name="location" value="{{ profile[7] }}">
+                    <p> Business Phone </p>
+                    <input type="text"  name="business" value="{{ profile[9] }}">
+                </div>
+                <br><br>
+                <hr>
+                <br>
+                <h3 style="margin-left:5%"> Company Information </h3>
+                <div class="column">
+                    <p> Company Name </p>
+                    <input type="text" name="company_name" value="{{ profile[10] }}">
+                </div>
+                <div class="column">
+                    <p> Company Size </p>
+                    <input type="text" name="company_size" value="{{ profile[11] }}">
+                </div>
+            </form>
+        </div>
+        <script src="../static/javascript/editprofile.js"></script>
+    </body>
+</html>

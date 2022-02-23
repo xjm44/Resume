@@ -1,0 +1,29 @@
+<!doctype html>
+{% include 'layout.html' %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/navigation.css">
+
+</head>
+<body>
+    <script src="../static/javascript/HeadBar_no_login.js"></script>
+    <form class="login" action="/login" method='post'>
+        <legend>LOGIN</legend>
+        <input name="username" type="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+
+        <input type="submit" value="Login">
+        <div class="inner">
+            <a href="/register">Create one</a><br>
+            <a href="/forgotpassword">Forgot password?</a>
+        </div>
+    </form>
+
+
+</body>
+</html>

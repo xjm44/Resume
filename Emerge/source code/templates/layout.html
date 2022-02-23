@@ -1,0 +1,47 @@
+<!doctype html>
+
+<head>
+
+  <script src="{{ url_for('static', filename='javascript/jquery.js') }}"></script>
+  <script>
+
+    $(function() {
+      $(".flashes").show().delay(1000).fadeOut();
+  })
+
+  </script>
+
+  <style>
+    .flashes {
+        display: block;
+        position: absolute;
+        margin: 0;
+        font-size: 22px;
+        padding: 23px;
+        list-style: none;
+        text-align: center;
+        color: #FFF;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .flashes li{
+        vertical-align: center;
+      }
+  </style>
+
+</head>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% if page.bar == False %}
+          <ul class="flashes" style="background-color: red;">
+        {% elif page.bar == True %}
+          <ul class="flashes" style="background-color: green;">
+        {% endif %}
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}

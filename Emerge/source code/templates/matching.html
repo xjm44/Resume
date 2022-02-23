@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% include 'layout.html' %}
+<html lang="en">
+<head>
+  <title>matching</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.custom_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Hide the browser's default checkbox */
+.custom_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.custom_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom_container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom_container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+
+<h3>AI Matching Information</h3>
+
+<div class="container">
+  <form method="post" action="/matching">
+    <label for="goal">Your Main Goal</label>
+    <select id="goal" name="goal">
+      {% for main_goal_cate in main_goals_cates %}
+      <option value={{main_goal_cate[0]}}> {{main_goal_cate[1]}}</option>
+      {% endfor %}
+    </select>
+
+    <label for="industry">Industry business</label>
+    <select id="industry" name="industry">
+      {% for industry_cate in industries_cates %}
+      <option value={{industry_cate[0]}}> {{industry_cate[1]}}</option>
+      {% endfor %}
+    </select>
+
+    <label for="exp">Preferred years of experience of coach </label>
+    <select id="exp" name="exp">
+      {% for exp_cate in exp_cates %}
+      <option value={{exp_cate[0]}}> {{exp_cate[1]}}</option>
+      {% endfor %}
+    </select>
+
+    <label for="gender">Preferred gender of coach </label>
+    <select id="gender" name="gender">
+      <option value="None"> No Preference</option>
+      <option value="Male"> Male</option>
+      <option value="Female"> Female</option>
+    </select>
+
+    <label for="age">Preferred age of coach </label>
+    <select id="age" name="age">
+      <option value="None"> No Preference</option>
+      {% for age_cate in age_cates %}
+      <option value={{age_cate[0]}}> {{age_cate[1]}}</option>
+      {% endfor %}
+    </select>
+
+    <label for="preferday">Prefered coaching day </label>
+    <br>
+    <br>
+    <label class="container">Monday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Tuesday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Wednesday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Thursday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Friday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Saturday
+      <input type="checkbox"/>
+    </label>
+    <label class="container">Sunday
+      <input type="checkbox"/>
+    </label>
+    <br>
+    <br>
+
+    <input type="submit" value="match">
+  </form>
+</div>
+
+</body>
+</html>

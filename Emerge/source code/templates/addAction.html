@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>addAction</title>
+<script src = "{{ url_for('static', filename='/javascript/addAction.js') }}"></script>
+
+<style>
+
+
+  .col-names{
+    background-color: #343a40;
+    border: none;
+    border-color: #454d55;
+    color: white;
+    font-size: 1.8em;
+    display: block;
+    width: 100%;
+  }
+
+  .add-action-table tr,th,td{
+    padding: 40px 20px;
+    border-color: #343a40;
+    text-align: left;
+  }
+
+  .body-of-add-action tr{
+    font-size: 1.5em;
+    background-color: lightgreen;
+    border: solid 15px white;
+    border-left: none;
+    border-right: none;
+  }
+
+  .body-of-add-action{
+    display: block;
+    height: 400px;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  .add-action-button {
+    height: 80px;
+    width: 80px;
+    float: left;
+    font-size: 60px;
+    margin-left: 40%;
+    margin-top: 3%;
+    border-radius: 50%;
+    background-color: green;
+    text-align: center;
+    color: black;
+    /* z-index: 5; */
+  }
+
+  .add-button-area{
+    display: block;
+    /* position: relative; */
+    width: auto;
+    background-color: lightgreen;
+    height: 150px;
+    border: solid 15px white;
+    border-left: none;
+    border-right: none;
+  }
+
+  .addNew_content{
+    display: none;
+    font-size: 1.5em;
+    background-color: lightgreen;
+    border: solid 15px white;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+  }
+
+  /* .crossing-mark{
+    position: relative;
+    margin-top: 5%;
+    left: 40%;
+    width:80px;
+    height:80px;
+    background-color: gray;
+    color: white;
+    font-size: 63px;
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+  } */
+
+
+
+</style>
+
+</head>
+
+<body>
+  <div class="add-action-table">
+  <table style="border-collapse: collapse;">
+    <thead class="col-names">
+    <tr style="border: none;">
+      <th style="width: 500px;">Goal</th>
+      <th style="width: 400px;">Times</th>
+      <th style="width: 200px;">Progress</th>
+    </tr>
+    </thead>
+    <tbody class="body-of-add-action">
+    <tr>
+      <td style="width: 500px;">goal 1</td>
+      <td style="width: 400px;">3</td>
+      <td style="width: 200px;">0%</td>
+      <!-- <td style="text-align: right; width: 200px;"><a href="#">X</a></td> -->
+    </tr>
+
+    <tr>
+      <td>goal 2</td>
+      <td>2</td>
+      <td style="width: 200px;">0%</td>
+    </tr>
+
+    <tr>
+      <td>goal 3</td>
+      <td>1</td>
+      <td style="width: 200px;">0%</td>
+    </tr>
+    </tbody>
+
+    <!-- <tfoot class="add-new-area">
+      <tr class="addNew_content" style="border: solid 15px white; border-left: none; border-right: none">
+        <form action="#" id="add-action-area"><td style="width: 480px;"><input type="text" id="new_action" name="new_action" style="font-size: 1.3em;"></input></td>
+        <td style="width: 380px;"><input type="text" id="new_frequency" name="new_frequency" style="font-size: 1.3em;"></input></td>
+        <td style="text-align: right; width: 200px;"><input onclick="newActionAdded()" type="submit" value="Add" style="font-size: 1em"></input></td></form>
+      </tr>
+
+      <tr>
+          <td class="add-button-area"><a href="javascript:;" onclick="newAction();" class="add-action-button">+</a></td>
+      </tr>
+    </tfoot> -->
+
+
+  </table>
+  </div>
+</body>
+
+
+</html>

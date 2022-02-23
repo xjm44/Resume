@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+{% include 'layout.html' %}
+<html lang="en">
+<head>
+<title>mainPage</title>
+<script src = "{{ url_for('static', filename='/javascript/homepage.js') }}"></script>
+
+<link href="../static/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/navigation.css">
+
+
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+
+}
+
+.topbar{
+  min-width: 1450px;
+}
+
+.sidebar{
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 250px;
+  /* width: 19%; */
+  /* border-right: solid #EDEDED;
+  background-color: lightgray; */
+}
+
+
+.side-bar-options{
+  position: relative;
+  left: 5%;
+  top: 20px;
+  font-size: 30px;
+}
+
+.side-bar-options a{
+  text-decoration: none;
+  color: green;
+}
+
+.main-section{
+  position: absolute;
+  float: left;
+  min-width: 1200px;
+  /* width: 77%; */
+  height: 100%;
+  left: 250px;
+}
+
+.header{
+  position: relative;
+  border-bottom: solid #EDEDED;
+  font-size: 20px;
+  padding: 20px;
+  padding-left: 80px;
+  height: 10%;
+}
+
+.sessions{
+  position: relative;
+  padding: 20px;
+  padding-left: 80px;
+  height: 70%;
+  display: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sessions::-webkit-scrollbar{
+  display: none;
+}
+
+.goals{
+  position: relative;
+  padding: 20px;
+  padding-left: 80px;
+  height: 70%;
+  display: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.goals::-webkit-scrollbar{
+  display: none;
+}
+
+.session-board {
+  /* position: reletive; */
+  float: left;
+  border: solid;
+  border-width: 3px;
+  border-left-width: 6px;
+  border-left-color: green;
+  border-radius: 7px;
+  border-style: outset;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+  margin-top: 20px;
+
+}
+
+.session-date{
+  position: relative;
+  float: left;
+  font-size: 20px;
+}
+
+.session-time{
+  position: relative;
+  left: 40px;
+  font-size: 20px;
+}
+
+.session-content{
+  position: relative;
+  font-size: 30px;
+  word-wrap: break-word;
+}
+.session-link button{
+  padding:1%;
+}
+
+
+.goal{
+  position: relative;
+  margin-top: 5%;
+  height: 200px;
+  width: 70%;
+  border: solid;
+  border-width: 3px;
+  border-left-width: 6px;
+  border-left-color: green;
+  border-radius: 7px;
+  border-style: outset;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  font-size: 22px;
+  word-wrap: break-word;
+}
+
+#progress-percentage{
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 470px;
+}
+
+#made-progress-button{
+  font-size: 20px;
+}
+
+.no-goal{
+  display: block;
+  position: relative;
+  text-align: center;
+  top: 35%;
+  font-size: 80px;
+  color: green;
+}
+
+.new-goal{
+  display: none;
+  position: relative;
+  top: 30px;
+  font-size: 25px;
+}
+
+.new-goal button{
+  font-size: 20px;
+}
+
+.explore{
+  display: none;
+}
+
+.explore-board{
+  position: relative;
+  float: left;
+  border: solid #EDEDED;
+  top:50px;
+  left:60px;
+  padding:20px;
+}
+
+
+</style>
+</head>
+
+<body onload="changeSection()">
+
+  <script src="../static/javascript/navigationBar.js"></script>
+
+  <!-- sidebar -->
+  <div class="sidebar">
+    <div class="side-bar-options">
+      <a href="/main"><i class="fa fa-home" id="option-home"> Home</i></a>
+      <br>
+      <br>
+      <a href="/main/goals"><i class="fas fa-medal" id="options-goals"> Goals</i></a>
+      <br>
+      <br>
+      <a href="/main/explore"><i class="fas fa-search" id="options-explore"> Explore</i></a>
+    </div>
+  </div>
+
+  <div class="main-section">
+  <!-- header -->
+  <div class="header">
+    <h1>Welcome {{username}}</h1>
+  </div>
+
+  <!-- session cards -->
+  <div class="sessions">
+    <h2>Your Next Sessions</h2>
+    {% if sessions != none %}
+    {% for session in sessions %}
+    <div class="session-board">
+      <div class="session-date">{{session[0]}}</div>
+      <div class="session-time">{{session[1]}}</div>
+      <div class="session-content">meeting</div>
+      <!-- <div class="session-link">{{session[3]}}</div> -->
+      <div class="session-link"><button><a href="{{session[3]}}">Zoom</a></button></div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="goals">
+    <h2>Your Goals</h2>
+
+    {% for i in range(0,maxgoals) %}
+    <div class = "goal" id="goal-section{{i}}">
+      {% if i < goal_num %}
+      <div class="have-goal">
+        <h3>{{goals[i]}}</h3>
+        <p>&nbsp&nbsp Total Times: {{total_times[i]}}</p>
+        &nbsp&nbsp<progress value="{{progress[i]/total_times[i]}}" max="1"></progress>
+        <p id="progress-percentage">{{ (progress[i]/total_times[i]*100)|round|int }}%</p>
+        <br><br>
+        <form method="post">
+          <input type="hidden" name="form-name" value = "progress"></input>
+          &nbsp&nbsp<button id="made-progress-button" name="made-progress-button" value="{{ids[i]}}">made progress</button>
+        </form>
+      </div>
+      {% else %}
+      <div class="no-goal" onclick="toAdd({{i-goal_num}})">
+        <b>+</b>
+      </div>
+
+      <div class="new-goal">
+        <form method="post">
+          <input type="hidden" name="form-name" value = "new_goal"></input>
+          <label for="new-goal-input">Goal:</label>
+          <input type="text" id="new-goal-input" name="new-goal-input" required="required" size="55" maxlength="50" style="font-size: 20px;">
+          <br>
+          <br>
+          <label for="new-times-input">Total Times:</label>
+          <input type="number" id="new-times-input" name="new-times-input" required="required" min=1 max=99 oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(value.length>2)value=value.slice(0,2);" style="font-size: 20px; width: 50px;">
+
+          <br>
+          <br>
+          <button type="submit" value="Add" style="">Add</button>
+        </form>
+      </div>
+      {% endif %}
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+  <div class="explore">
+    <div class="explore-board" id="why-evidence-based-coach">
+      <div class="explore-picture" id="why-evidence-based-coach-picture">
+        <img src="https://static.wixstatic.com/media/baac51_121a663408ad477dacbfbd49d274712e~mv2.jpg/v1/fill/w_390,h_260,al_c,q_80,usm_0.66_1.00_0.01/baac51_121a663408ad477dacbfbd49d274712e~mv2.webp" alt="why-evidence-based-coach">
+      </div>
+      <div class="explore-description" id="why-evidence-based-coach-description">
+        <a href="/evidencebasedcoach" style="text-decoration: none; color: #551A8B;"><h2>Why-Evidence-Based-Coach</h2></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+<body>
+</html>

@@ -1,0 +1,49 @@
+{
+
+  "hero": {
+    "x": 84.8,
+    "xVelocity": 5.0,
+    "size" : "normal"
+  },
+
+  "floorHeight": 450.0,
+  "levelWidth": 5500.0,
+  "levelHeight": 600.0,
+
+  "immovableEntities": [
+
+    {
+      "type": "platform",
+      "x": 3100.0,
+      "y": 425.0
+    },
+
+    {
+      "type": "finish_flag",
+      "x": 5500.0,
+      "y": 450.0
+    }
+
+  ],
+
+  "movableEntities": [
+
+    {
+      "type": "cloud",
+      "x": 75.0,
+      "y": 150.0,
+      "xVelocity": 36.7
+    }
+
+  ],
+
+  "enemies": [
+
+    {
+      "type": "slimeR",
+      "x": 0.0
+    }
+
+  ]
+
+}

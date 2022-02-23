@@ -1,0 +1,21 @@
+,coach_id,coach_goal_1,coach_goal_2,coach_goal_3,coach_industry,coach_year_of_experience,coach_age,coach_gender
+0,25,"(6, 'Improve leadership and perspective-taking capacity')","(7, 'Building effective team relationships')","(6, 'Improve leadership and perspective-taking capacity')","(16, 'Education and Training')",2,58,Male
+1,26,"(4, 'Giving & Receiving Feedback')","(8, 'Building an inclusive team')","(6, 'Improve leadership and perspective-taking capacity')","(8, 'Accommodation and Food Services')",8,25,Female
+2,27,"(4, 'Giving & Receiving Feedback')","(4, 'Giving & Receiving Feedback')","(8, 'Building an inclusive team')","(1, 'Agriculture, Forestry and Fishing')",4,50,Female
+3,28,"(2, 'Self-care & Building effective work habits')","(7, 'Building effective team relationships')","(4, 'Giving & Receiving Feedback')","(15, 'Public Administration and Safety')",1,44,Male
+4,29,"(9, 'Delating workload and manage your team')","(9, 'Delating workload and manage your team')","(1, 'Perfectionism & Procrastination')","(1, 'Agriculture, Forestry and Fishing')",8,45,Male
+5,30,"(3, 'Confidence/Presentation Anxiety')","(9, 'Delating workload and manage your team')","(6, 'Improve leadership and perspective-taking capacity')","(1, 'Agriculture, Forestry and Fishing')",7,48,Male
+6,31,"(6, 'Improve leadership and perspective-taking capacity')","(4, 'Giving & Receiving Feedback')","(1, 'Perfectionism & Procrastination')","(13, 'Professional, Scientific and Technical Services')",3,48,Female
+7,32,"(4, 'Giving & Receiving Feedback')","(5, 'Increase uncertainty tolerance and resilience')","(4, 'Giving & Receiving Feedback')","(17, 'Health Care and Social Assistance')",6,35,Female
+8,33,"(4, 'Giving & Receiving Feedback')","(4, 'Giving & Receiving Feedback')","(1, 'Perfectionism & Procrastination')","(3, 'Manufacturing')",9,56,Female
+9,34,"(8, 'Building an inclusive team')","(10, 'Managing your inner critic/Imposter Syndrome')","(7, 'Building effective team relationships')","(3, 'Manufacturing')",2,50,Male
+10,35,"(5, 'Increase uncertainty tolerance and resilience')","(5, 'Increase uncertainty tolerance and resilience')","(2, 'Self-care & Building effective work habits')","(18, 'Arts and Recreation Services')",8,32,Male
+11,36,"(6, 'Improve leadership and perspective-taking capacity')","(5, 'Increase uncertainty tolerance and resilience')","(1, 'Perfectionism & Procrastination')","(6, 'Wholesale Trade')",5,36,Male
+12,37,"(8, 'Building an inclusive team')","(5, 'Increase uncertainty tolerance and resilience')","(8, 'Building an inclusive team')","(9, 'Transport, Postal and Warehousing')",9,21,Female
+13,38,"(3, 'Confidence/Presentation Anxiety')","(8, 'Building an inclusive team')","(3, 'Confidence/Presentation Anxiety')","(18, 'Arts and Recreation Services')",10,28,Male
+14,39,"(4, 'Giving & Receiving Feedback')","(8, 'Building an inclusive team')","(1, 'Perfectionism & Procrastination')","(18, 'Arts and Recreation Services')",8,56,Male
+15,40,"(8, 'Building an inclusive team')","(8, 'Building an inclusive team')","(10, 'Managing your inner critic/Imposter Syndrome')","(7, 'Retail Trade')",7,49,Female
+16,41,"(3, 'Confidence/Presentation Anxiety')","(4, 'Giving & Receiving Feedback')","(10, 'Managing your inner critic/Imposter Syndrome')","(17, 'Health Care and Social Assistance')",2,42,Male
+17,42,"(8, 'Building an inclusive team')","(2, 'Self-care & Building effective work habits')","(5, 'Increase uncertainty tolerance and resilience')","(19, 'Other Services')",4,32,Male
+18,43,"(4, 'Giving & Receiving Feedback')","(4, 'Giving & Receiving Feedback')","(9, 'Delating workload and manage your team')","(7, 'Retail Trade')",2,39,Female
+19,44,"(10, 'Managing your inner critic/Imposter Syndrome')","(3, 'Confidence/Presentation Anxiety')","(3, 'Confidence/Presentation Anxiety')","(5, 'Construction')",8,33,Female

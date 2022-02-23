@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>CoachMainPage</title>
+
+<script src = "{{ url_for('static', filename='/javascript/coachMain.js') }}"></script>
+
+<link href="../static/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/navigation.css">
+<link rel="stylesheet" href="../static/css/calendar.css">
+
+
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+
+}
+
+.topbar{
+  min-width: 1450px;
+}
+
+.sidebar{
+  position: relative;
+  float: left;
+  height: 90%;
+  width: 250px;
+  /* width: 19%; */
+  /* border-right: solid #EDEDED;
+  background-color: lightgray; */
+}
+
+.logo{
+  position: relative;
+  left: 5%;
+  font-size: 25px;
+
+}
+
+.side-bar-options{
+  position: relative;
+  left: 5%;
+  top: 20px;
+  font-size: 30px;
+}
+
+.side-bar-options a{
+  text-decoration: none;
+  color: green;
+}
+
+.main-section{
+  position: absolute;
+  float: left;
+  min-width: 1200px;
+  /* width: 77%; */
+  height: 90%;
+  left: 250px;
+}
+
+.header{
+  position: relative;
+  border-bottom: solid #EDEDED;
+  font-size: 20px;
+  padding: 20px;
+  padding-left: 80px;
+  height: 10%;
+}
+
+.sessions{
+  position: relative;
+  padding: 20px;
+  padding-left: 80px;
+  height: 80%;
+  display: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sessions::-webkit-scrollbar{
+  display: none;
+}
+
+.leaders{
+  position: relative;
+  padding-top: 20px;
+  padding-left: 0px;
+  height: 90%;
+  display: none;
+
+}
+
+
+.session-board {
+  position: reletive;
+  float: left;
+  border: solid;
+  border-width: 3px;
+  border-left-width: 6px;
+  border-left-color: green;
+  border-radius: 7px;
+  border-style: outset;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+  /* background-color: lightgray; */
+}
+
+.session-date{
+  position: relative;
+  float: left;
+  font-size: 20px;
+}
+
+.session-time{
+  position: relative;
+  left: 40px;
+  font-size: 20px;
+}
+
+.session-content{
+  position: relative;
+  font-size: 30px;
+  word-wrap: break-word;
+}
+
+.session-link button{
+  padding:1%;
+}
+
+.leader_list{
+  float:left;
+  min-width: 300px;
+  height: 100%;
+  border: solid;
+  border-top: none;
+  border-bottom: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  text-align: center;
+}
+
+.leaders_list::-webkit-scrollbar{
+  display: none;
+}
+
+.leader_list_card{
+  height: 70px;
+  /* border-top: solid; */
+  line-height: 85px;
+  text-align: center;
+  margin: 15px;
+}
+
+.leader_list_card h3 {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all ease-in-out 260ms;
+}
+
+.leader_list_card h3:hover{
+  background: lightgray;
+}
+
+
+
+.leader_board{
+  float:left;
+  min-width: 800px;
+  height: 100%;
+  padding-left: 50px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  display: block;
+}
+
+.leaders_board::-webkit-scrollbar{
+  display: none;
+}
+
+.leader_goal{
+  margin-top: 20px;
+}
+
+.goal_card{
+  height: 150px;
+  width: 700px;
+  border: solid;
+  border-width: 3px;
+  border-left-width: 6px;
+  border-left-color: green;
+  border-radius: 7px;
+  border-style: outset;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  font-size: 22px;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+#progress-percentage{
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 400px;
+}
+
+.msglogo{
+  position: relative;
+  float: right;
+  right:15%;
+  margin-top:2%;
+  font-size: 35px;
+  cursor: pointer;
+
+}
+.closebtn_chat{
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(45deg);
+  font-size: 65px;
+  color: #3CB371;
+  bottom: 15%;
+  left:36%;
+}
+
+.chat{
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 21%;
+  transform: translate(80%,-50%);
+  width: 30%;
+  height : 90%;
+}
+.chat2{
+  float: right;
+  padding: 4%;
+  height: 100vh;
+
+}
+/* learnt from https://csshint.com/html-css-chat-box-designs/  */
+.chatbox {
+  padding-top: 8%;
+    width: 53vh;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chat-background {
+    background: #708090;
+    overflow: scroll;
+    height: 90vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.schedule{
+  display:none;
+  top:40px;
+  position:relative;
+  padding-top:20px;
+  height:90%;
+}
+
+
+.chat-background::-webkit-scrollbar{
+  display: auto;
+}
+.chat-input {
+    background: #F5F5F5;
+    border: 1px solid #E9967A;
+    height: 53%;
+}
+.inputtext{
+  padding: 1%;
+  height: 90%;
+  max-width: 25vh;
+  float: left;
+  margin-bottom: 20%;
+}
+.inputenter{
+  float: right;
+  padding: 1%;
+  padding-left: 1%;
+  width: 20%;
+  height:80%;
+}
+.chat-input input {
+  height: 90%;
+  width: 40vh;
+  color: black;
+  background-color: #F0FFF0;
+
+}
+#chat_btn{
+  width:100%;
+  height:100%;
+  text-align: center;
+}
+.message_receiver {
+    display: inline-block;
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 1%;
+}
+.message_receiver .message_box {
+    border-radius: 3px;
+    background: #66CDAA;
+    float: left;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.message_sender {
+    display: inline-block;
+    width: 90%;
+    margin-top: 3%;
+    float: right;
+    margin-right: 1%;
+}
+.message_sender .message_box {
+    border-radius: 3px;
+    background: #BC8F8F;
+    float: right;
+    margin-bottom: 1.5%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.msgg {
+    display: inline-block;
+    font-size: 12pt;
+    line-height: 14pt;
+    color: #FFFAFA;
+    padding-left: 3%;
+}
+.timestamp {
+    display: inline-block;
+    width: 100%;
+    color: #2F4F4F;
+    font-size: 9pt;
+}
+.sent_time {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.message_sender .msg {
+    text-align: right;
+}
+.message_sender .timestamp {
+    text-align: right;
+}
+.message_box {
+    display: relative;
+    box-shadow: 0 0 3px rgba(0,40,0,.5),0 0 2px rgba(0,30,0,.5);
+}
+
+</style>
+</head>
+
+<body onload="changeSection()">
+
+  <script src="../static/javascript/Coach_navi.js"></script>
+
+  <!-- sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <!-- <h1>Emerge</h1> -->
+    </div>
+    <div class="side-bar-options">
+      <a href="/coachMain"><i class="fa fa-home" id="option-home"> Home</i></a>
+      <br>
+      <br>
+      <a href="/coachMain/leaders"><i class="fas fa-users" id="options-leaders"> Leaders</i></a>
+      <br>
+      <br>
+      <a href="/coachMain/schedule"><i class="fas fa-calendar-alt" id="options-schedule"> Schedule</i></a>
+    </div>
+  </div>
+
+  <div class="main-section">
+  <!-- header -->
+  <div class="header">
+    <h1>Welcome {{username}}</h1>
+  </div>
+
+  <!-- session cards -->
+  <div class="sessions">
+    <h2>Your Next Sessions</h2>
+    {% if sessions != none %}
+    {% for session in sessions %}
+    <div class="session-board">
+      <div class="session-date">{{session[0]}}</div>
+      <div class="session-time">{{session[1]}}</div>
+      <div class="session-content">meeting with {{session[4]}}</div>
+      <div class="session-link"><button><a href="{{session[3]}}">Zoom</a></button></div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="leaders">
+    <div class="leader_list">
+      <h2>Leaders List</h2>
+      {% set leader_num = namespace(value=0) %}
+      {% for leader in leaders %}
+      <form id="choose_leader{{leader_num.value}}" method="post">
+        <input type="hidden" name="form-name" value = "leader_choice" id="{{leader_num.value}}"></input>
+        <div class="leader_list_card" onclick="formSub({{leader_num.value}})">
+          <input type="hidden" name="choosed_leader" value="{{leader[1]}}">
+            <h3>{{leader[0]}}</h3>
+        </div>
+      </form>
+        {% set leader_num.value = leader_num.value + 1 %}
+      {% endfor %}
+
+    </div>
+
+    {% if board_display %}
+    <div class="leader_board">
+      <h3 style="font-size: 30px;">NEXT SESSION: {{next_session[0]}} {{next_session[1]}}</h3>
+      <!-- ============CHAT HERE==============-->
+      <div class="msg">
+        <div class="msglogo">
+          <i onclick="pressed_chat()" class="fa fa-comment" id="option-msg"></i>
+        </div>
+      </div>
+      <!-- ================================== -->
+      <div class="leader_goal">
+        <h4 style="font-size: 30px;">Leader's Goals</h4>
+          {% for i in range(0, goal_num) %}
+          <div class = "goal_card" id="goal-section{{i}}">
+            <div class="have-goal">
+              <h3>{{goal_names[i]}}</h3>
+              <p>&nbsp&nbsp Total Times: {{goal_total_times[i]}}</p>
+              &nbsp&nbsp<progress value="{{goal_progresses[i]}}" max="{{goal_total_times[i]}}"></progress>
+              <p id="progress-percentage">{{ (goal_progresses[i]/goal_total_times[i]*100) |round|int }}%</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div class="schedule">
+    <div class="container">
+      <div class="calendar">
+        <div hidden class="not_default" value="{{date}}"></div>
+        <div hidden class="coach_time" value="{{coach_time}}"></div>
+        <div class="month">
+          <i class="left arrow" onclick="last()"></i>
+          <div class="date">
+            <p></p>
+          </div>
+          <i class="right arrow" onclick="next()"></i>
+        </div>
+        <div class="week">
+          <p>Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+          <p>Sta</p>
+          <p>Sun</p>
+        </div>
+        <div class="days">
+        </div>
+      </div>
+      <div class = event>
+        <h2 style="color:black; margin-left:5%; margin-top:20px;"></h2>
+        <div style="width:80%; border-bottom: 1px solid; border-color:#009400;"></div>
+        <div class="cards">
+          <div class="add_time timecard">
+            <form method = 'post' id = "add_time_post">
+              <input type="hidden" name="form-name" value = "add_time"></input>
+              <select name="start">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+              </select>
+              <select name="end">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+              </select>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/javascript/calendar.js"></script>
+  </div>
+
+
+  </div>
+  <!-- ============CHAT HERE==============-->
+  <div class="chat" id="chat" >
+    <div class="picture_chat_box">
+      <!-- learnt from https://csshint.com/html-css-chat-box-designs/ -->
+    <div class="chat2">
+    <section class="chatbox">
+      <section class="chat-background" id ="chat-background">
+        <!-- chat messages -->
+        {% for i in range(0,allmsg) %}
+        <!-- 0 == sender -->
+        {% if result[i][4] == 1 %}
+        <article class="message_sender" id="message_sender">
+          <div class="message_box">
+            <div class="label">
+                <p class="msgg" id="msg_s">
+                  {{result[i][0]}}
+                </p>
+              <span class="timestamp">
+                <span class="sent_time"> {{result[i][3]}} </span>
+              </span>
+            </div>
+          </div>
+        </article>
+        {% else %}
+        <article class="message_receiver" id="message_receiver">
+           <div class="message_box">
+             <div class="label">
+                 <p class="msgg" id="msg_r">
+                   {{result[i][0]}}
+                 </p>
+
+              <span class="timestamp">
+                 <span class="sent_time">{{result[i][3]}}</span>
+               </span>
+            </div>
+           </div>
+         </article>
+        {% endif %}
+        {% endfor %}
+
+      </section>
+       <!-- send chat -->
+      <form method='post'>
+        <input type="hidden" name="form-name" value = "message"></input>
+        <input type="hidden" name="leader_id_msg" id="leader_id_msg" value = {{choosed_leader_id}}></input>
+        <div class="chat-input">
+          <div class="inputtext">
+        <input type="text" id="chat_msg"  name ="message" placeholder="Message to the leader" >
+        </div>
+        <div class="inputenter">
+          <input  type="submit" value='press enter' id="chat_btn" >
+      </div>
+      </div>
+      </form>
+
+    </section>
+    </div>
+    </div>
+
+    <div class="closebtn_chat">+</div>
+  </div>
+
+  <!-- ================================== -->
+  {% if hassent == 1 %}
+  <script>
+  document.getElementById("option-msg").click();
+  var out = document.getElementById("chat-background");
+  out.scrollTop = out.scrollHeight - out.clientHeight;
+  document.getElementById("chat_msg").focus();
+  </script>
+  {% endif %}
+
+
+
+
+  </body>
+</html>

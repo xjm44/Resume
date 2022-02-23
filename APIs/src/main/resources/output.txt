@@ -1,0 +1,4 @@
+// a space and only one space is required between from:/to: and the corresponding email, as well as token and its key. Replace emails and key in the 3 lines bellow. This is because my code for this text file only read line 2 3 4.
+from: jixu4775@uni.sydney.edu.au
+to: 401270621qq@gmail.com
+token: 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

@@ -1,0 +1,282 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial;
+}
+
+.intro-board {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/landing-intro.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  min-width: 1000px;
+}
+
+.intro-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.intro-text button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: 18px;
+}
+
+.intro-text button:hover {
+  opacity: 0.7;
+}
+
+.whats-emerge-readmore a{
+  text-decoration: none;
+  border: solid #6666FF;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+  background: #6666FF;
+  font-size: 20px;
+}
+
+.part2{
+  height: 1000px;
+  min-width: 1000px;
+}
+
+.img-emerge{
+  border-right: 20px white;
+  margin-top:40px;
+  float:left;
+  height: 950px;
+  width: calc(50% - 20px);
+  min-width: 280px;
+  background: no-repeat url("../image/intro-video call.jpg");
+  background-size: 50% 1000px;
+  background-attachment: fixed;
+}
+
+/* .img-emerge img{
+  width: 100%;
+  height: 950px;
+
+  overflow-y: hidden;
+} */
+
+.whats-emerge{
+  margin-top:40px;
+  float:right;
+  background-color: black;
+  height: 950px;
+  width: 50%;
+  min-width: 500px;
+  max-width: 850px;
+
+}
+
+.whats-emerge-content{
+  margin-top: 150px;
+  color: white;
+  font-size: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+
+}
+
+.whats-emerge-content p{
+  font-size: 25px;
+}
+
+.whats-emerge-readmore{
+  margin-top: 150px;
+  margin-left: 20%;
+}
+
+.join-and-strengthen{
+  color: #6666FF;
+  font-size: 33px;
+  text-align: center;
+  min-width: 1000px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.pic-how-emerge-work{
+  width: 100%;
+  min-width: 1000px;
+  height: 550px;
+}
+
+.pic-how-emerge-work img{
+  float: left;
+  width: 50%;
+  min-width: 450px;
+  max-height: 500px;
+}
+
+.how-emerge-work{
+  color: #6666FF;
+  float: left;
+  margin-left: clamp(10px, 5%, calc(100% - 450px - 450px));
+  font-size: 30px;
+  max-width: 450px;
+}
+
+.how-emerge-work p{
+  font-size: 25px;
+}
+
+.our-coach-part{
+  height: 500px;
+  margin-top: 50px;
+  width: calc(100% - 50px);
+  min-width: 1000px;
+  margin-left: 50px;
+}
+
+.our-coache-intro{
+  float: left;
+  color: #6666FF;
+  margin-left: clamp(0px, 5%, calc((100% - 900px) / 2));
+  font-size: 25px;
+  height: 100%;
+  width: 400px;
+}
+
+.our-coach-img{
+  float: left;
+  margin-left: clamp(0px, 5%, calc((100% - 900px) / 2));
+  width: 50%;
+  min-width: 500px;
+  max-width: 750px;
+
+
+  height: 100%;
+}
+
+.our-coach-img img{
+  width: 100%;
+}
+
+.coaches-info{
+  padding-left: 5%;
+  margin-top: 60px;
+  min-width: 1000px;
+}
+
+.coach-card {
+  float: left;
+  width: 30%;
+  margin: 50px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 600px;
+}
+
+.why-evidence-based-section{
+  margin-left: 120px;
+  margin-top: 300px;
+  height: 200px;
+  min-width: 1000px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.why-evidence-based-section img{
+  float: left;
+  width: 50%;
+  min-width: 450px;
+  max-height: 500px;
+  max-width: 650px;
+}
+
+.why-evidence-based-content{
+  color: #6666FF;
+  float: left;
+  margin-left: clamp(30px, 5%, calc(100% - 450px - 450px));
+  font-size: 30px;
+  max-width: 450px;
+
+}
+
+/* Footer refer to the https://codepen.io/scanfcode/pen/MEZPNd */
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  margin-top:150px;
+}
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr.small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+.footer-links li {
+  display: block;
+}
+.footer-links a {
+  color: #737373;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+.footer-links.inline li {
+  display: inline-block;
+}
+
+
+.our-coach-part button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+}
+
+.our-coach-part button:hover {
+  opacity: 0.7;
+}

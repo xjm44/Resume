@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoachMainPage</title>
+
+  <script src = "{{ url_for('static', filename='/javascript/coachMainPage.js') }}"></script>
+
+  <style>
+
+
+    .schedule-and-actions{
+      height: 1300px;
+      background-color: lightgray;
+      position: relative;
+      color: black;
+    }
+
+
+
+    .client-list{
+      position: relative;
+      float: left;
+      left: 40%;
+      top: 10%;
+
+    }
+
+
+
+    .container{
+      margin:100px auto;
+      width:809px;
+    }
+
+    .user-schedule {
+      position: relative;
+      float: left;
+      left: 10%;
+      top: 10%;
+      font-size: 40px;
+      width:32%;
+      box-shadow: 0px 0px 35px -16px rgba(0,0,0,0.75);
+      font-family: 'Roboto', sans-serif;
+      padding: 20px 30px;
+      color:#363b41;
+      display: inline-block;
+    }
+
+
+
+    .calendar_header{
+      border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .calendar_plan{
+      margin:20px 0 40px;
+    }
+
+
+    .calendar_events{
+      color:$light_grey;
+      overflow: scroll;
+      height: 600px;
+    }
+    .ce_title{
+      font-size:25px;
+    }
+
+    .event_item{
+      margin: 18px 0;
+      padding:5px;
+    }
+
+    .client_item{
+      margin: 18px 0;
+      padding:5px;
+    }
+
+    .ei_Dot,.ei_Title{
+      display:inline-block;
+    }
+
+    .ei_Dot{
+      border-radius:50%;
+      width:10px;
+      height: 10px;
+      background-color: $light_grey;
+      box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+    }
+    .dot_active{
+      background-color: #FF8494;
+    }
+
+    .ei_Title{
+      text-decoration: none;
+      text-decoration-color: white;
+      margin-left:10px;
+      color:white;
+    }
+
+    .ei_Copy{
+      font-size:30px;
+      margin-left:27px;
+    }
+
+    .user-schedule{
+      /* background-image: linear-gradient(-222deg, #646464, #454545); */
+      background-color: green;
+      color: white;
+
+    }
+
+    .client-list {
+      position: relative;
+      float: left;
+      left: 20%;
+      top: 10%;
+      font-size: 40px;
+      width:32%;
+      box-shadow: 0px 0px 35px -16px rgba(0,0,0,0.75);
+      font-family: 'Roboto', sans-serif;
+      padding: 20px 30px;
+      color:#363b41;
+      display: inline-block;
+
+      /* background-image: linear-gradient(-222deg, #646464, #454545); */
+      background-color: green;
+      color: white;
+
+    }
+
+    #client-next-session{
+      font-size:30px;
+      margin-left:0px;
+      color: white;
+      text-decoration: none;
+    }
+
+    #view-action-button{
+      color:white;
+    }
+
+    .addAction-cover{
+      display: none;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.6);
+      z-index: 5;
+      width:100%;
+      height:100%;
+    }
+
+    /* .addAction-content{
+      z-index: 10;
+    } */
+
+    .addAction{
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .crossing-mark{
+      position: relative;
+      margin-top: 5%;
+      left: 40%;
+      width:80px;
+      height:80px;
+      background-color: gray;
+      color: white;
+      font-size: 63px;
+      border-radius: 100px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+    <h1 style="font-size: 60px; margin-left: 3%;">Hello {{ username }}</h1>
+
+
+    <div class= "schedule-and-actions">
+        <!-- canlendar -->
+      <div class="user-schedule">
+          <div class="calendar_header">
+            <h1 class = "header_title">Schedule</h1>
+          </div>
+        <!--this part will editor later for loop and if function -->
+          <div class="calendar_events">
+            <p class="ce_title">Upcoming Events</p>
+            <div class="event_item">
+              <div class="ei_Dot dot_active"></div>
+              <div class="ei_Title">Sep 19th 10:30 am</div>
+              <div class="ei_Copy">Lesson 1</div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 12:00 pm</div>
+              <div class="ei_Copy">Lesson 2</div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 13:00 pm</div>
+              <div class="ei_Copy">Lesson 3 </div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 14:30 am</div>
+              <div class="ei_Copy">Lesson 4</div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 15:30 am</div>
+              <div class="ei_Copy">Lesson 5</div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 15:30 am</div>
+              <div class="ei_Copy">Lesson 5</div>
+            </div>
+            <div class="event_item">
+              <div class="ei_Dot"></div>
+              <div class="ei_Title">Sep 19th 15:30 am</div>
+              <div class="ei_Copy">Lesson 5</div>
+            </div>
+          </div>
+        </div>
+        <!-- canlendar -->
+
+
+        <!-- client-list -->
+        <div class="client-list">
+            <div class="calendar_header">
+              <h1 class = "header_title">Client List</h1>
+            </div>
+          <!--this part will editor later for loop and if function -->
+            <div class="calendar_events">
+              <div class="client_item">
+                <div class="ei_Title"><a href="javascript:;" onclick="popupSetActionPage();" id="view-action-button">Client 1</a></div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 2</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 3</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 4</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 5</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 6</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+              <div class="client_item">
+                <div class="ei_Title">Client 7</div>
+                <div class="ei_Copy"><a id="client-next-session">Next session: 2022/12/24</a></div>
+              </div>
+            </div>
+          </div>
+          <!-- actions -->
+    </div>
+
+    <div class="addAction">
+      {% include "addAction.html" %}
+      <div class = "crossing-mark" onclick="cancel_popup()">
+        <strong>×</strong>
+      </div>
+    </div>
+    <div class="addAction-cover">
+    </div>
+
+
+
+
+  </body>
+</html>

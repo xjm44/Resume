@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% include 'layout.html' %}
+<html lang="en">
+
+<head>
+  <title>findCoach</title>
+<link rel="stylesheet" href="../static/css/navigation.css">
+<style>
+
+.title-of-find-coach{
+  position: relative;
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.AI-matching{
+
+}
+
+#find-coach-button{
+  position: relative;
+  width: auto;
+  border: none;
+  background-color: green;
+  padding: 35px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-width: thin;
+  font-size: 2em;
+  color: black;
+  margin-left: 60%;
+  margin-top: 40px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<script src="../static/javascript/navigationBar.js"></script>
+<div class="title-of-find-coach">
+  <h1 style="font-size: 65px; margin-left:2%;">Hello {{ username }}</h1>
+  <h1 Style="font-size: 100px; text-align: center; margin-top: 170px;"> Doesn't have a coach yet?</h1>
+</div>
+
+<div class="AI-matching">
+  <h1 style="font-size: 40px; margin-left:10%; margin-top:60px;">information about AI matching</h1>
+</div>
+
+<a href="/matching" id="find-coach-button" style="text-decoration: none;">Find a Coach Now!</a>
+</body>
+</html>

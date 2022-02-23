@@ -1,0 +1,101 @@
+leader_id,main_goal,industry,years_of_experience,prefer_age,prefer_gender,matched_coach_id,,,,coach_id,coach_goal_1,coach_goal_2,coach_goal_3,coach_industry,coach_year_of_experience,coach_age,coach_gender
+1,"(5, 'Increase uncertainty tolerance and resilience')","(8, 'Accommodation and Food Services')","(5, '7-8')","(None, 'None')",Male,11,,,,1,"(4, 'Giving & Receiving Feedback')","(1, 'Perfectionism & Procrastination')","(5, 'Increase uncertainty tolerance and resilience')","(13, 'Professional, Scientific and Technical Services')",5,40,Male
+2,"(10, 'Managing your inner critic/Imposter Syndrome')","(2, 'Mining')","(2, '1-2')","(1, '20-25')",Male,19,,,,2,"(10, 'Managing your inner critic/Imposter Syndrome')","(3, 'Confidence/Presentation Anxiety')","(8, 'Building an inclusive team')","(19, 'Other Services')",7,45,Male
+3,"(2, 'Self-care & Building effective work habits')","(3, 'Manufacturing')","(4, '5-6')","(3, '31-35')",Male,7,,,,3,"(3, 'Confidence/Presentation Anxiety')","(1, 'Perfectionism & Procrastination')","(2, 'Self-care & Building effective work habits')","(19, 'Other Services')",5,29,Female
+4,"(8, 'Building an inclusive team')","(1, 'Agriculture, Forestry and Fishing')","(6, '8-9')","(7, '50-')",,12,,,,4,"(5, 'Increase uncertainty tolerance and resilience')","(8, 'Building an inclusive team')","(10, 'Managing your inner critic/Imposter Syndrome')","(1, 'Agriculture, Forestry and Fishing')",4,34,Female
+5,"(2, 'Self-care & Building effective work habits')","(9, 'Transport, Postal and Warehousing')","(6, '8-9')","(1, '20-25')",Male,13,,,,5,"(6, 'Improve leadership and perspective-taking capacity')","(6, 'Improve leadership and perspective-taking capacity')","(10, 'Managing your inner critic/Imposter Syndrome')","(6, 'Wholesale Trade')",5,28,Male
+6,"(5, 'Increase uncertainty tolerance and resilience')","(7, 'Retail Trade')","(3, '3-4')","(2, '26-30')",Male,10,,,,6,"(10, 'Managing your inner critic/Imposter Syndrome')","(6, 'Improve leadership and perspective-taking capacity')","(1, 'Perfectionism & Procrastination')","(7, 'Retail Trade')",3,30,Female
+7,"(8, 'Building an inclusive team')","(9, 'Transport, Postal and Warehousing')","(6, '8-9')","(4, '36-40')",Male,12,,,,7,"(10, 'Managing your inner critic/Imposter Syndrome')","(2, 'Self-care & Building effective work habits')","(2, 'Self-care & Building effective work habits')","(9, 'Transport, Postal and Warehousing')",6,33,Female
+8,"(5, 'Increase uncertainty tolerance and resilience')","(2, 'Mining')","(3, '3-4')","(3, '31-35')",Female,4,,,,8,"(2, 'Self-care & Building effective work habits')","(5, 'Increase uncertainty tolerance and resilience')","(9, 'Delating workload and manage your team')","(18, 'Arts and Recreation Services')",2,31,Male
+9,"(7, 'Building effective team relationships')","(6, 'Wholesale Trade')","(6, '8-9')","(4, '36-40')",Female,20,,,,9,"(8, 'Building an inclusive team')","(1, 'Perfectionism & Procrastination')","(7, 'Building effective team relationships')","(7, 'Retail Trade')",8,35,Female
+10,"(4, 'Giving & Receiving Feedback')","(1, 'Agriculture, Forestry and Fishing')","(4, '5-6')","(1, '20-25')",,1,,,,10,"(8, 'Building an inclusive team')","(6, 'Improve leadership and perspective-taking capacity')","(5, 'Increase uncertainty tolerance and resilience')","(8, 'Accommodation and Food Services')",4,30,Female
+11,"(6, 'Improve leadership and perspective-taking capacity')","(12, 'Rental, Hiring and Real Estate Services')","(1, 'Below 1')","(4, '36-40')",Male,6,,,,11,"(9, 'Delating workload and manage your team')","(10, 'Managing your inner critic/Imposter Syndrome')","(5, 'Increase uncertainty tolerance and resilience')","(18, 'Arts and Recreation Services')",9,44,Female
+12,"(5, 'Increase uncertainty tolerance and resilience')","(14, 'Administrative and Support Services')","(1, 'Below 1')","(6, '46-50')",Female,17,,,,12,"(8, 'Building an inclusive team')","(3, 'Confidence/Presentation Anxiety')","(1, 'Perfectionism & Procrastination')","(11, 'Financial and Insurance Services')",10,51,Male
+13,"(5, 'Increase uncertainty tolerance and resilience')","(16, 'Education and Training')","(4, '5-6')","(6, '46-50')",Male,11,,,,13,"(10, 'Managing your inner critic/Imposter Syndrome')","(2, 'Self-care & Building effective work habits')","(10, 'Managing your inner critic/Imposter Syndrome')","(16, 'Education and Training')",9,28,Female
+14,"(6, 'Improve leadership and perspective-taking capacity')","(4, 'Electricity, Gas, Water and Waste Services')","(2, '1-2')","(3, '31-35')",Male,5,,,,14,"(2, 'Self-care & Building effective work habits')","(8, 'Building an inclusive team')","(2, 'Self-care & Building effective work habits')","(17, 'Health Care and Social Assistance')",6,42,Male
+15,"(8, 'Building an inclusive team')","(3, 'Manufacturing')","(1, 'Below 1')","(5, '41-45')",Male,14,,,,15,"(2, 'Self-care & Building effective work habits')","(10, 'Managing your inner critic/Imposter Syndrome')","(4, 'Giving & Receiving Feedback')","(12, 'Rental, Hiring and Real Estate Services')",4,54,Female
+16,"(1, 'Perfectionism & Procrastination')","(17, 'Health Care and Social Assistance')","(6, '8-9')","(3, '31-35')",Male,18,,,,16,"(2, 'Self-care & Building effective work habits')","(8, 'Building an inclusive team')","(4, 'Giving & Receiving Feedback')","(7, 'Retail Trade')",3,48,Female
+17,"(6, 'Improve leadership and perspective-taking capacity')","(1, 'Agriculture, Forestry and Fishing')","(7, 'Above 9')","(7, '50-')",,5,,,,17,"(10, 'Managing your inner critic/Imposter Syndrome')","(3, 'Confidence/Presentation Anxiety')","(5, 'Increase uncertainty tolerance and resilience')","(14, 'Administrative and Support Services')",1,34,Male
+18,"(6, 'Improve leadership and perspective-taking capacity')","(18, 'Arts and Recreation Services')","(6, '8-9')","(4, '36-40')",Female,5,,,,18,"(4, 'Giving & Receiving Feedback')","(4, 'Giving & Receiving Feedback')","(1, 'Perfectionism & Procrastination')","(12, 'Rental, Hiring and Real Estate Services')",9,46,Female
+19,"(7, 'Building effective team relationships')","(8, 'Accommodation and Food Services')","(6, '8-9')","(2, '26-30')",,20,,,,19,"(1, 'Perfectionism & Procrastination')","(10, 'Managing your inner critic/Imposter Syndrome')","(4, 'Giving & Receiving Feedback')","(11, 'Financial and Insurance Services')",1,21,Male
+20,"(2, 'Self-care & Building effective work habits')","(15, 'Public Administration and Safety')","(3, '3-4')","(3, '31-35')",Female,7,,,,20,"(3, 'Confidence/Presentation Anxiety')","(7, 'Building effective team relationships')","(3, 'Confidence/Presentation Anxiety')","(19, 'Other Services')",9,24,Male
+21,"(9, 'Delating workload and manage your team')","(8, 'Accommodation and Food Services')","(6, '8-9')","(7, '50-')",Female,11,,,,,,,,,,,
+22,"(9, 'Delating workload and manage your team')","(1, 'Agriculture, Forestry and Fishing')","(2, '1-2')","(6, '46-50')",Female,11,,,,,,,,,,,
+23,"(3, 'Confidence/Presentation Anxiety')","(12, 'Rental, Hiring and Real Estate Services')","(7, 'Above 9')","(5, '41-45')",,12,,,,,,,,,,,
+24,"(6, 'Improve leadership and perspective-taking capacity')","(7, 'Retail Trade')","(7, 'Above 9')","(5, '41-45')",,5,,,,,,,,,,,
+25,"(7, 'Building effective team relationships')","(14, 'Administrative and Support Services')","(1, 'Below 1')","(None, 'None')",,20,,,,,,,,,,,
+26,"(1, 'Perfectionism & Procrastination')","(1, 'Agriculture, Forestry and Fishing')","(4, '5-6')","(5, '41-45')",Male,1,,,,,,,,,,,
+27,"(3, 'Confidence/Presentation Anxiety')","(10, 'Information Media and Telecommunications')","(3, '3-4')","(None, 'None')",Male,2,,,,,,,,,,,
+28,"(8, 'Building an inclusive team')","(7, 'Retail Trade')","(4, '5-6')","(3, '31-35')",Male,9,,,,,,,,,,,
+29,"(1, 'Perfectionism & Procrastination')","(4, 'Electricity, Gas, Water and Waste Services')","(1, 'Below 1')","(4, '36-40')",,1,,,,,,,,,,,
+30,"(7, 'Building effective team relationships')","(14, 'Administrative and Support Services')","(5, '7-8')","(6, '46-50')",,9,,,,,,,,,,,
+31,"(7, 'Building effective team relationships')","(5, 'Construction')","(4, '5-6')","(5, '41-45')",Female,9,,,,,,,,,,,
+32,"(3, 'Confidence/Presentation Anxiety')","(6, 'Wholesale Trade')","(5, '7-8')","(3, '31-35')",Male,20,,,,,,,,,,,
+33,"(6, 'Improve leadership and perspective-taking capacity')","(17, 'Health Care and Social Assistance')","(1, 'Below 1')","(None, 'None')",Female,10,,,,,,,,,,,
+34,"(2, 'Self-care & Building effective work habits')","(2, 'Mining')","(3, '3-4')","(None, 'None')",Female,16,,,,,,,,,,,
+35,"(5, 'Increase uncertainty tolerance and resilience')","(2, 'Mining')","(3, '3-4')","(7, '50-')",Male,11,,,,,,,,,,,
+36,"(3, 'Confidence/Presentation Anxiety')","(2, 'Mining')","(6, '8-9')","(4, '36-40')",Female,20,,,,,,,,,,,
+37,"(6, 'Improve leadership and perspective-taking capacity')","(10, 'Information Media and Telecommunications')","(6, '8-9')","(4, '36-40')",Female,5,,,,,,,,,,,
+38,"(1, 'Perfectionism & Procrastination')","(12, 'Rental, Hiring and Real Estate Services')","(5, '7-8')","(None, 'None')",Male,18,,,,,,,,,,,
+39,"(6, 'Improve leadership and perspective-taking capacity')","(18, 'Arts and Recreation Services')","(6, '8-9')","(3, '31-35')",Female,5,,,,,,,,,,,
+40,"(6, 'Improve leadership and perspective-taking capacity')","(19, 'Other Services')","(4, '5-6')","(7, '50-')",,5,,,,,,,,,,,
+41,"(3, 'Confidence/Presentation Anxiety')","(9, 'Transport, Postal and Warehousing')","(2, '1-2')","(4, '36-40')",,2,,,,,,,,,,,
+42,"(10, 'Managing your inner critic/Imposter Syndrome')","(19, 'Other Services')","(5, '7-8')","(2, '26-30')",Male,2,,,,,,,,,,,
+43,"(3, 'Confidence/Presentation Anxiety')","(12, 'Rental, Hiring and Real Estate Services')","(1, 'Below 1')","(None, 'None')",Female,20,,,,,,,,,,,
+44,"(1, 'Perfectionism & Procrastination')","(2, 'Mining')","(5, '7-8')","(3, '31-35')",Female,9,,,,,,,,,,,
+45,"(3, 'Confidence/Presentation Anxiety')","(16, 'Education and Training')","(6, '8-9')","(2, '26-30')",Male,20,,,,,,,,,,,
+46,"(6, 'Improve leadership and perspective-taking capacity')","(2, 'Mining')","(6, '8-9')","(3, '31-35')",Female,5,,,,,,,,,,,
+47,"(10, 'Managing your inner critic/Imposter Syndrome')","(1, 'Agriculture, Forestry and Fishing')","(6, '8-9')","(1, '20-25')",,13,,,,,,,,,,,
+48,"(9, 'Delating workload and manage your team')","(9, 'Transport, Postal and Warehousing')","(2, '1-2')","(1, '20-25')",Female,8,,,,,,,,,,,
+49,"(10, 'Managing your inner critic/Imposter Syndrome')","(7, 'Retail Trade')","(5, '7-8')","(None, 'None')",Male,11,,,,,,,,,,,
+50,"(7, 'Building effective team relationships')","(13, 'Professional, Scientific and Technical Services')","(1, 'Below 1')","(2, '26-30')",,20,,,,,,,,,,,
+51,"(6, 'Improve leadership and perspective-taking capacity')","(14, 'Administrative and Support Services')","(4, '5-6')","(1, '20-25')",,5,,,,,,,,,,,
+52,"(1, 'Perfectionism & Procrastination')","(10, 'Information Media and Telecommunications')","(5, '7-8')","(1, '20-25')",Female,9,,,,,,,,,,,
+53,"(6, 'Improve leadership and perspective-taking capacity')","(9, 'Transport, Postal and Warehousing')","(7, 'Above 9')","(3, '31-35')",Female,5,,,,,,,,,,,
+54,"(5, 'Increase uncertainty tolerance and resilience')","(17, 'Health Care and Social Assistance')","(6, '8-9')","(3, '31-35')",,11,,,,,,,,,,,
+55,"(6, 'Improve leadership and perspective-taking capacity')","(15, 'Public Administration and Safety')","(5, '7-8')","(4, '36-40')",,5,,,,,,,,,,,
+56,"(1, 'Perfectionism & Procrastination')","(9, 'Transport, Postal and Warehousing')","(3, '3-4')","(6, '46-50')",,18,,,,,,,,,,,
+57,"(9, 'Delating workload and manage your team')","(12, 'Rental, Hiring and Real Estate Services')","(6, '8-9')","(7, '50-')",,11,,,,,,,,,,,
+58,"(1, 'Perfectionism & Procrastination')","(17, 'Health Care and Social Assistance')","(2, '1-2')","(1, '20-25')",,19,,,,,,,,,,,
+59,"(1, 'Perfectionism & Procrastination')","(12, 'Rental, Hiring and Real Estate Services')","(6, '8-9')","(3, '31-35')",Male,18,,,,,,,,,,,
+60,"(8, 'Building an inclusive team')","(6, 'Wholesale Trade')","(7, 'Above 9')","(3, '31-35')",Male,12,,,,,,,,,,,
+61,"(2, 'Self-care & Building effective work habits')","(10, 'Information Media and Telecommunications')","(2, '1-2')","(None, 'None')",Male,16,,,,,,,,,,,
+62,"(5, 'Increase uncertainty tolerance and resilience')","(14, 'Administrative and Support Services')","(6, '8-9')","(2, '26-30')",,11,,,,,,,,,,,
+63,"(9, 'Delating workload and manage your team')","(17, 'Health Care and Social Assistance')","(3, '3-4')","(7, '50-')",Male,11,,,,,,,,,,,
+64,"(4, 'Giving & Receiving Feedback')","(5, 'Construction')","(2, '1-2')","(1, '20-25')",Female,19,,,,,,,,,,,
+65,"(2, 'Self-care & Building effective work habits')","(15, 'Public Administration and Safety')","(7, 'Above 9')","(None, 'None')",Male,13,,,,,,,,,,,
+66,"(10, 'Managing your inner critic/Imposter Syndrome')","(2, 'Mining')","(3, '3-4')","(7, '50-')",Female,15,,,,,,,,,,,
+67,"(1, 'Perfectionism & Procrastination')","(1, 'Agriculture, Forestry and Fishing')","(6, '8-9')","(1, '20-25')",,18,,,,,,,,,,,
+68,"(9, 'Delating workload and manage your team')","(9, 'Transport, Postal and Warehousing')","(4, '5-6')","(4, '36-40')",Female,11,,,,,,,,,,,
+69,"(3, 'Confidence/Presentation Anxiety')","(6, 'Wholesale Trade')","(7, 'Above 9')","(None, 'None')",Male,12,,,,,,,,,,,
+70,"(9, 'Delating workload and manage your team')","(9, 'Transport, Postal and Warehousing')","(7, 'Above 9')","(1, '20-25')",Female,11,,,,,,,,,,,
+71,"(5, 'Increase uncertainty tolerance and resilience')","(11, 'Financial and Insurance Services')","(2, '1-2')","(2, '26-30')",Male,10,,,,,,,,,,,
+72,"(1, 'Perfectionism & Procrastination')","(4, 'Electricity, Gas, Water and Waste Services')","(5, '7-8')","(7, '50-')",Male,12,,,,,,,,,,,
+73,"(8, 'Building an inclusive team')","(5, 'Construction')","(6, '8-9')","(3, '31-35')",Female,12,,,,,,,,,,,
+74,"(9, 'Delating workload and manage your team')","(4, 'Electricity, Gas, Water and Waste Services')","(6, '8-9')","(2, '26-30')",,11,,,,,,,,,,,
+75,"(10, 'Managing your inner critic/Imposter Syndrome')","(14, 'Administrative and Support Services')","(1, 'Below 1')","(5, '41-45')",Male,17,,,,,,,,,,,
+76,"(4, 'Giving & Receiving Feedback')","(8, 'Accommodation and Food Services')","(4, '5-6')","(None, 'None')",,1,,,,,,,,,,,
+77,"(3, 'Confidence/Presentation Anxiety')","(17, 'Health Care and Social Assistance')","(3, '3-4')","(None, 'None')",Female,20,,,,,,,,,,,
+78,"(1, 'Perfectionism & Procrastination')","(17, 'Health Care and Social Assistance')","(7, 'Above 9')","(None, 'None')",Male,12,,,,,,,,,,,
+79,"(6, 'Improve leadership and perspective-taking capacity')","(12, 'Rental, Hiring and Real Estate Services')","(3, '3-4')","(7, '50-')",Male,5,,,,,,,,,,,
+80,"(8, 'Building an inclusive team')","(13, 'Professional, Scientific and Technical Services')","(5, '7-8')","(7, '50-')",,12,,,,,,,,,,,
+81,"(8, 'Building an inclusive team')","(14, 'Administrative and Support Services')","(7, 'Above 9')","(2, '26-30')",Male,12,,,,,,,,,,,
+82,"(3, 'Confidence/Presentation Anxiety')","(19, 'Other Services')","(6, '8-9')","(1, '20-25')",Male,20,,,,,,,,,,,
+83,"(4, 'Giving & Receiving Feedback')","(12, 'Rental, Hiring and Real Estate Services')","(3, '3-4')","(4, '36-40')",,18,,,,,,,,,,,
+84,"(10, 'Managing your inner critic/Imposter Syndrome')","(12, 'Rental, Hiring and Real Estate Services')","(1, 'Below 1')","(6, '46-50')",Female,15,,,,,,,,,,,
+85,"(8, 'Building an inclusive team')","(6, 'Wholesale Trade')","(3, '3-4')","(None, 'None')",Male,16,,,,,,,,,,,
+86,"(1, 'Perfectionism & Procrastination')","(7, 'Retail Trade')","(3, '3-4')","(None, 'None')",Male,6,,,,,,,,,,,
+87,"(7, 'Building effective team relationships')","(1, 'Agriculture, Forestry and Fishing')","(6, '8-9')","(None, 'None')",,20,,,,,,,,,,,
+88,"(8, 'Building an inclusive team')","(14, 'Administrative and Support Services')","(7, 'Above 9')","(5, '41-45')",Male,12,,,,,,,,,,,
+89,"(2, 'Self-care & Building effective work habits')","(19, 'Other Services')","(5, '7-8')","(None, 'None')",,13,,,,,,,,,,,
+90,"(10, 'Managing your inner critic/Imposter Syndrome')","(7, 'Retail Trade')","(3, '3-4')","(1, '20-25')",Male,6,,,,,,,,,,,
+91,"(5, 'Increase uncertainty tolerance and resilience')","(18, 'Arts and Recreation Services')","(5, '7-8')","(4, '36-40')",,11,,,,,,,,,,,
+92,"(1, 'Perfectionism & Procrastination')","(14, 'Administrative and Support Services')","(1, 'Below 1')","(6, '46-50')",Male,18,,,,,,,,,,,
+93,"(3, 'Confidence/Presentation Anxiety')","(15, 'Public Administration and Safety')","(1, 'Below 1')","(1, '20-25')",Female,20,,,,,,,,,,,
+94,"(2, 'Self-care & Building effective work habits')","(7, 'Retail Trade')","(7, 'Above 9')","(6, '46-50')",Female,13,,,,,,,,,,,
+95,"(10, 'Managing your inner critic/Imposter Syndrome')","(14, 'Administrative and Support Services')","(4, '5-6')","(6, '46-50')",,2,,,,,,,,,,,
+96,"(1, 'Perfectionism & Procrastination')","(5, 'Construction')","(6, '8-9')","(None, 'None')",Female,12,,,,,,,,,,,
+97,"(2, 'Self-care & Building effective work habits')","(5, 'Construction')","(1, 'Below 1')","(3, '31-35')",Male,8,,,,,,,,,,,
+98,"(3, 'Confidence/Presentation Anxiety')","(11, 'Financial and Insurance Services')","(1, 'Below 1')","(2, '26-30')",Female,12,,,,,,,,,,,
+99,"(5, 'Increase uncertainty tolerance and resilience')","(7, 'Retail Trade')","(3, '3-4')","(4, '36-40')",Female,1,,,,,,,,,,,
+100,"(6, 'Improve leadership and perspective-taking capacity')","(8, 'Accommodation and Food Services')","(1, 'Below 1')","(2, '26-30')",Male,10,,,,,,,,,,,

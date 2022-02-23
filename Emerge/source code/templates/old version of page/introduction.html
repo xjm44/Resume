@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+    /* Hero Image
+    Source link:https://www.w3schools.com/howto/howto_css_hero_image.asp */
+
+body, html {
+
+}
+
+.intro-board {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../static/image/photo-1630673195489-1237053bab5e.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  min-width: 800px;
+}
+
+.intro-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.intro-text button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: 18px;
+}
+
+.intro-text button:hover {
+  opacity: 0.7;
+}
+
+.header {
+    background-color:green;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.welcome{
+  background-color:black;
+  color:white;
+  text-align:right;
+  /* padding:80px; */
+  height: 500px;
+}
+
+.priceImg{
+  position: relative;
+  right: 60%;
+  top: 200px;
+}
+
+.welLabel{
+  position: relative;
+  font-size: 200%;
+  top:100px;
+  right: 200px;
+}
+
+.price-box {
+  width:100%;
+  height:700px;
+  background-color: green;
+  color:white;
+  position: relative;
+
+}
+
+.price-label{
+  width:30%;
+  top:10%;
+  right:15%;
+  position:relative;
+  float:right;
+  font-size:30px;
+}
+
+
+.button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  right: 200px;
+  top: -300px;
+}
+
+.button:hover {
+  background-color: rgb(69, 16, 212);
+  color: white;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columnTeam {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  margin-left:40px;
+}
+
+@media screen and (max-width: 650px) {
+  .columnTeam {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.buttonTeam {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+}
+
+.buttonTeam:hover {
+  background-color: #555;
+}
+
+.footer{
+  background-color:green;
+      color:white;
+      text-align:center;
+      padding:20px;
+}
+
+/* Text Blocks Over Image
+source link:https://www.w3schools.com/howto/howto_css_image_text_blocks.asp */
+
+.advertisement-container {
+  position: relative;
+  font-family: Arial;
+  color: white;
+}
+
+.advertisement-container-txt {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.advertisement-container-txt button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: 18px;
+}
+
+.advertisement-container button:hover {
+  opacity: 0.7;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.price_card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.price_card button:hover {
+  opacity: 0.7;
+}
+
+</style>
+
+<link rel="stylesheet" href="../static/css/navigation.css">
+</head>
+
+<body>
+
+  <script src="../static/javascript/introNaviBar.js"></script>
+
+
+<!-- /* Hero Image
+Source link:https://www.w3schools.com/howto/howto_css_hero_image.asp */ -->
+<div class="intro-board" style="margin-top:20px;">
+  <div class="intro-text">
+    <h1 style="font-size:50px">Mental strength for Emerging Leaders</h1>
+    <p>Digital Coaching </p>
+    <button>Book Now</button>
+  </div>
+</div>
+<!-- /* Product Card
+source link:https://www.w3schools.com/howto/howto_css_product_card.asp */ -->
+
+
+<div class="advertisement-container">
+  <img src="../static/image/photo-1632004400309-85adbe2aa203.jpg" alt="Nature" style="width:100%;">
+
+  <div class="advertisement-container-txt">
+    <h1 style="font-size: 40px;">What is EMERGE?</h1>
+    <p style="font-size: 25px;">EMERGE is a digital platform that connects evidence based coaches with high potential emerging leaders. It enables emerging leaders to scale their businesses by reducing their psychological stress and increasing their mental strength.</p>
+    <button>Read More</button>
+  </div>
+</div>
+
+<div class="Why-Evidence-based-coach">
+  <div class="article-of-about">
+    <h1 style="font-size: 50px;">Abouts</h1>
+    <p >
+      Every single individual has patterns and behaviors that hold them back. EMERGE, a renown coaching professional, is here to help you in your new journey. Through expert advice and proactive coaching, you’ll soon be excelling in a way you never thought possible. Book a consultation today to find the change you’ve been seeking.
+    </p>
+  </div>
+
+  <div class="picture_first">
+    <img src="../static/image/photo-1604842591806-1f45c2f7e858.jpg" alt="Background Image" width="620px" height="500px">
+  </div>
+  <div class="circle3">
+    <div class="dot4"></div>
+    <div class="dot5"></div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="columnTeam">
+<div class="price_card">
+  <img src="../static/image/photo-1626453746498-f61d2b45279b.jpg" style="width:100%">
+  <h1>Motivational Speaking</h1>
+  <p class="price">$19.99</p>
+  <p>1hr.</p>
+  <p><button>Book Now</button></p>
+</div>
+</div>
+
+<div class="columnTeam">
+<div class="price_card">
+  <img src="../static/image/photo-1632164299051-52665b4c13d8.jpg" style="width:100%">
+  <h1>Workshop</h1>
+  <p class="price">$19.99</p>
+  <p>1hr</p>
+  <p><button>Book Now</button></p>
+</div>
+</div>
+
+<div class="columnTeam">
+  <div class="price_card">
+    <img src="../static/image/photo-1629252320397-a150a68ad97d.jpg" style="width:100%">
+    <h1>1-on-1 Session</h1>
+    <p class="price">$19.99</p>
+    <p>1hr</p>
+    <p><button>Book Now</button></p>
+  </div>
+  </div>
+</div>
+
+
+
+<section class="section_2">
+
+  <div class="content2">
+    <div class="section_2_1">
+      <img src="../static/image/photo-1630090896228-88e5ea707294.jpg" alt="Background Image" width="780x" height="600px">
+    </div>
+
+
+    <div class="section_2_2">
+
+        <h1 style="font-size: 65px;">OUR COACHES</h1>
+        <p >
+          Our coaches bring decades of corporate experience, run their own businesses and are masters in coaching psychology. They use evidence-based methods and a hyper-personalised learning experience to help you grow as a leader.
+        </p>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+<h2>R  Responsive "Meet The Team" Section</h2>
+<br>
+
+<div class="row">
+  <div class="columnTeam">
+    <div class="card">
+      <img src="../static/image/photo-1631624222568-6619ce21a683.jpg" width="360px" height="404px">
+      <div class="container">
+        <h2>A</h2>
+        <p class="title">CoachA</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="buttonTeam">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="columnTeam">
+    <div class="card">
+      <img src="../static/image/photo-1631761320198-4bc79af9029b.jpg" width="360px" height="404px">
+      <div class="container">
+        <h2>B</h2>
+        <p class="title">CoachB</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="buttonTeam">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="columnTeam">
+    <div class="card">
+      <img src="../static/image/photo-1588676478262-3d48b5a0c60e.jpg" width="360px" height="404px">
+      <div class="container">
+        <h2>C</h2>
+        <p class="title">Coachc</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="buttonTeam">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+</html>

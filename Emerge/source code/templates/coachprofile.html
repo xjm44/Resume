@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>coachProfile</title>
+    <style>
+
+            .main{
+                padding:20px 50px 50px 50px;
+            }
+
+            body{
+                background: white;
+            }
+
+            .card{
+                padding: 2rem 1rem 2rem 1rem ;
+                margin: auto;
+                overflow: hidden;
+                border-radius: 10px;
+                width: 75%;
+            }
+
+            .image-card{
+                background: linear-gradient(to right, green, aquamarine);
+            }
+
+            .information-card{
+                padding-top: 8px;
+                background: #F3F3F3;
+            }
+
+            .information-card h{
+                font-size: 25px;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .information-card p{
+                margin-top:20px;
+                margin-bottom:20px;
+                font-size: 20px;
+            }
+
+            .column{
+                display: inline-block;
+                vertical-align: top;
+                width: 45%;
+            }
+
+            .thebutton{
+                height: 30px;
+                width: 30px;
+                position: relative;
+                float:right;
+                right:20px;
+            }
+
+        </style>
+    <link rel="stylesheet" href="../static/css/navigation.css">
+</head>
+<body>
+<script src="../static/javascript/Coach_navi.js"></script>
+<div class="main">
+    <div class="card image-card" style ="margin-top:20px;">
+        <h3 style="color: black; float: left; position: relative; left:10px; margin-top:50px;"> {{ profile[0] }} </h3>
+        <a href="/editprofile">
+            <img class="thebutton" src="../static/image/dots.png">
+        </a>
+        <p style="margin-top: 140px; margin-left: 10px;"> Your introduction </p>
+    </div>
+    <div class="card information-card" style="margin-top: 8px; margin-bottom: 8px;">
+        <h2> Personal Information </h2>
+        <div class="column">
+            <p> First Name: &nbsp&nbsp{{ profile[1]}}</p>
+            <p> Age:  &nbsp&nbsp{{profile[3]}}</p>
+<!--            <p> Birthday:  &nbsp&nbsp{{profile[5]}}</p>-->
+        </div>
+        <div class="column">
+            <p> Last Name:  &nbsp&nbsp{{profile[2]}}</p>
+            <p> Gender:  &nbsp&nbsp{{profile[4]}}</p>
+        </div>
+    </div>
+    <div class="card information-card" style="margin-top: 8px; margin-bottom: 8px;">
+        <h2> Contact Information </h2>
+        <div class="column">
+            <p> Email: &nbsp&nbsp{{profile[5]}}</p>
+<!--            <p> Mobile Phone: &nbsp&nbsp{{profile[7]}}</p>-->
+        </div>
+        <div class="column">
+            <p> Mobile Phone: &nbsp&nbsp{{profile[6]}}</p>
+<!--            <p> Business Phone: &nbsp&nbsp{{profile[8]}}</p>-->
+        </div>
+    </div>
+    <div class="card information-card" style="margin-top: 8px; margin-bottom: 8px;">
+        <h2> Coach Information </h2>
+        <div class="column">
+            <p> Years of experience: &nbsp&nbsp{{profile[7]}}</p>
+            <p> Expert in goals: </p>
+            <p>1. {{profile[9]}}</p>
+            <p>2. {{profile[10]}}</p>
+            <p>3. {{profile[11]}}</p>
+        </div>
+        <div class="column">
+            <p> Proficient in leader's industry type: </p>
+            <p>&nbsp&nbsp{{profile[8]}}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
